@@ -1,0 +1,1263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ambica Jewelry</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!-- CSS only -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+
+    <link rel="stylesheet" href="women.css">
+</head>
+<body>
+    <style>
+        .social1 ul li:hover {
+            transform: translate(80px, 0);
+            background: rgba(232, 8, 8, 0.4);
+        }
+    
+        .fa-snapchat-ghost:before, .fa-snapchat:before {
+        content: "\f2ab";
+        color: black;
+        }
+        @media (max-width: 765px) {
+            .social1 {
+                width: 30px;
+            }
+        }
+
+/****************************** Custom Horizontal Scroll Card ***************************************/
+
+.custom-horizontal-scroll-wrapper {
+    display: flex; /* Use flexbox to center cards */
+    justify-content: center; /* Center cards horizontally */
+    padding: 30px 0; /* Optional padding for spacing */
+    width: 100%; /* Full width of the container */
+    box-sizing: border-box; /* Ensure padding and border are included in width */
+}
+
+/* Container holding the cards */
+.custom-horizontal-scroll-container {
+    display: flex; /* Use flexbox to align cards horizontally */
+    align-items: center; /* Center items vertically */
+}
+
+.custom-card {
+    flex: 0 0 auto; /* Prevent cards from shrinking or growing */
+    width: 180px; /* Card width */
+    margin: 0 15px; /* Space between cards */
+    background: #fff; /* Background color for the card */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for card */
+    overflow: hidden; /* Hide overflow for clean edges */
+    position: relative; /* For positioning content inside the card */
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Inherit color from parent */
+}
+
+.custom-card img {
+    width: 100%; /* Ensure image fills the card width */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove extra space below image */
+}
+
+.custom-card-content {
+    padding: 10px; /* Adjust padding inside the card */
+}
+
+.custom-card-content h2 {
+    margin-top: 0; /* Remove top margin */
+    font-size: 16px; /* Adjust font size for card title */
+    color: #333; /* Text color */
+}
+
+/* Shop By Colour Section */
+.shop-by-colour {
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 80px; /* Full viewport height for vertical centering */
+}
+
+.shop-by-colour h2 {
+    font-size: 24px; /* Font size for the heading */
+    color: #fefefe; /* Text color */
+    margin: 0; /* Remove default margin */
+}
+
+.shop-content {
+    text-align: center; /* Center text and image within the content */
+}
+
+.silver-image {
+    width: 70%; /* Set image width to be a significant portion of the container */
+    max-width: 1000px; /* Maximum width of the image */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure it is treated as a block element */
+    margin: 0 auto 20px auto; /* Center the image horizontally and add space below it */
+}
+
+
+/* Extra Small Devices (max-width: 360px) */
+@media (max-width: 360px) {
+  .custom-horizontal-scroll-wrapper {
+    padding: 5px; 
+    overflow-x: auto; 
+    box-sizing: border-box; 
+    white-space: nowrap; 
+    display: flex; 
+    justify-content: flex-start; 
+  }
+
+  .custom-horizontal-scroll-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 5px;
+    flex-wrap: nowrap; 
+    justify-content: flex-start; 
+    width: max-content; 
+  }
+
+  .custom-card {
+    width: 120px; 
+    height: auto; 
+    margin: 0 5px 10px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0; 
+  }
+
+  .custom-card img {
+    height: 80px; 
+    object-fit: cover;
+  }
+
+  .custom-card-content {
+    padding: 5px;
+  }
+
+  .custom-card-content h2 {
+    font-size: 10px; 
+  }
+
+  .shop-by-colour {
+    height: 40px;
+  }
+
+  .shop-by-colour h2 {
+    font-size: 12px; 
+  }
+
+  .silver-image {
+    width: 80%; 
+  }
+}
+
+/* Small Devices (min-width: 361px) and max-width: 391px */
+@media (min-width: 361px) and (max-width: 391px) {
+  .custom-horizontal-scroll-wrapper {
+    padding: 5px; 
+    overflow-x: auto; 
+    box-sizing: border-box; 
+    white-space: nowrap; 
+    display: flex; 
+    justify-content: flex-start; 
+  }
+
+  .custom-horizontal-scroll-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+    flex-wrap: nowrap; 
+    justify-content: flex-start; 
+    width: max-content; 
+  }
+
+  .custom-card {
+    width: 120px; 
+    height: auto; 
+    margin: 0 5px 10px;
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0; 
+  }
+
+  .custom-card img {
+    height: 100px; 
+    object-fit: cover;
+  }
+
+  .custom-card-content {
+    padding: 5px;
+  }
+
+  .custom-card-content h2 {
+    font-size: 11px; 
+  }
+
+  .shop-by-colour {
+    height: 45px;
+  }
+
+  .shop-by-colour h2 {
+    font-size: 13px; 
+  }
+
+  .silver-image {
+    width: 85%; 
+  }
+}
+
+/* Small Devices (min-width: 392px) and max-width: 480px */
+@media (min-width: 392px) and (max-width: 480px) {
+  .custom-horizontal-scroll-wrapper {
+    padding: 5px; 
+    overflow-x: auto; 
+    box-sizing: border-box; 
+    white-space: nowrap; 
+    display: flex; 
+    justify-content: flex-start; 
+  }
+
+  .custom-horizontal-scroll-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+    flex-wrap: nowrap; 
+    justify-content: flex-start; 
+    width: max-content; 
+  }
+
+  .custom-card {
+    width: 160px; 
+    height: auto; 
+    margin: 0 5px 10px;
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0; 
+  }
+
+  .custom-card img {
+    height: 120px; 
+    object-fit: cover;
+  }
+
+  .custom-card-content {
+    padding: 5px;
+  }
+
+  .custom-card-content h2 {
+    font-size: 12px; 
+  }
+
+  .shop-by-colour {
+    height: 50px;
+  }
+
+  .shop-by-colour h2 {
+    font-size: 14px; 
+  }
+
+  .silver-image {
+    width: 90%; 
+  }
+}
+
+/* Medium Devices (min-width: 481px) and max-width: 540px */
+@media (min-width: 481px) and (max-width: 540px) {
+  .custom-horizontal-scroll-wrapper {
+    padding: 10px; 
+    overflow-x: auto; 
+    box-sizing: border-box; 
+    white-space: nowrap; 
+    display: flex; 
+    justify-content: flex-start; 
+  }
+
+  .custom-horizontal-scroll-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    flex-wrap: nowrap; 
+    justify-content: flex-start; 
+    width: max-content; 
+  }
+
+  .custom-card {
+    width: 180px; 
+    height: auto; 
+    margin: 0 10px 15px;
+    background: #fff;
+    border-radius: 7px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0; 
+  }
+
+  .custom-card img {
+    height: 130px; 
+    object-fit: cover;
+  }
+
+  .custom-card-content {
+    padding: 7px;
+  }
+
+  .custom-card-content h2 {
+    font-size: 13px; 
+  }
+
+  .shop-by-colour {
+    height: 55px;
+  }
+
+  .shop-by-colour h2 {
+    font-size: 15px; 
+  }
+
+  .silver-image {
+    width: 92%; 
+  }
+}
+
+/* Large Devices (min-width: 541px) and max-width: 769px */
+@media (min-width: 541px) and (max-width: 769px) {
+  .custom-horizontal-scroll-wrapper {
+    padding: 10px; 
+    overflow-x: auto; 
+    box-sizing: border-box; 
+    white-space: nowrap; 
+    display: flex; 
+    justify-content: flex-start; 
+  }
+
+  .custom-horizontal-scroll-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    flex-wrap: nowrap; 
+    justify-content: flex-start; 
+    width: max-content; 
+  }
+
+  .custom-card {
+    width: 200px; 
+    height: auto; 
+    margin: 0 10px 15px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0; 
+  }
+
+  .custom-card img {
+    height: 150px; 
+    object-fit: cover;
+  }
+
+  .custom-card-content {
+    padding: 10px;
+  }
+
+  .custom-card-content h2 {
+    font-size: 14px; 
+  }
+
+  .shop-by-colour {
+    height: 60px;
+  }
+
+  .shop-by-colour h2 {
+    font-size: 16px; 
+  }
+
+  .silver-image {
+    width: 95%; 
+  }
+}
+
+/* Extra Large Devices (min-width: 770px) and max-width: 1015px */
+@media (min-width: 770px) and (max-width: 1015px) {
+  .custom-horizontal-scroll-wrapper {
+    padding: 15px; 
+    overflow-x: auto; 
+    box-sizing: border-box; 
+    white-space: nowrap; 
+    display: flex; 
+    justify-content: flex-start; 
+  }
+
+  .custom-horizontal-scroll-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    flex-wrap: nowrap; 
+    justify-content: flex-start; 
+    width: max-content; 
+  }
+
+  .custom-card {
+    width: 220px; 
+    height: auto; 
+    margin: 0 15px 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0; 
+  }
+
+  .custom-card img {
+    height: 170px; 
+    object-fit: cover;
+  }
+
+  .custom-card-content {
+    padding: 10px;
+  }
+
+  .custom-card-content h2 {
+    font-size: 16px; 
+  }
+
+  .shop-by-colour {
+    height: 65px;
+  }
+
+  .shop-by-colour h2 {
+    font-size: 18px; 
+  }
+
+  .silver-image {
+    width: 98%; 
+  }
+}
+
+/* Extra Large Devices (min-width: 1280px) */
+@media (min-width: 1015px) and (max-width:1299){
+  .custom-horizontal-scroll-wrapper {
+    padding: 20px; 
+    overflow-x: auto; 
+    box-sizing: border-box; 
+    white-space: nowrap; 
+    display: flex; 
+    justify-content: center; 
+  }
+
+  .custom-horizontal-scroll-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    flex-wrap: nowrap; 
+    justify-content: flex-start; 
+    width: max-content; 
+  }
+
+  .custom-card {
+    width: 250px; 
+    height: auto; 
+    margin: 0 20px 25px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0; 
+  }
+
+  .custom-card img {
+    height: 200px; 
+    object-fit: cover;
+  }
+
+  .custom-card-content {
+    padding: 12px;
+  }
+
+  .custom-card-content h2 {
+    font-size: 18px; 
+  }
+
+  .shop-by-colour {
+    height: 70px;
+  }
+
+  .shop-by-colour h2 {
+    font-size: 20px; 
+  }
+
+  .silver-image {
+    width: 100%; 
+  }
+}
+
+/* Extra Large Devices (min-width: 1280px) */
+@media (min-width: 1300px){
+  .custom-horizontal-scroll-wrapper {
+    padding: 20px; 
+    overflow-x: auto; 
+    box-sizing: border-box; 
+    white-space: nowrap; 
+    display: flex; 
+    justify-content: center; 
+  }
+
+  .custom-horizontal-scroll-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    flex-wrap: nowrap; 
+    justify-content: flex-start; 
+    width: max-content; 
+  }
+
+  .custom-card {
+    width: 240px; 
+    height: auto; 
+    margin: 0 20px 25px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0; 
+  }
+
+  .custom-card img {
+    height: 200px; 
+    object-fit: cover;
+  }
+
+  .custom-card-content {
+    padding: 12px;
+  }
+
+  .custom-card-content h2 {
+    font-size: 18px; 
+  }
+
+  .shop-by-colour {
+    height: 70px;
+  }
+
+  .shop-by-colour h2 {
+    font-size: 20px; 
+  }
+
+  .silver-image {
+    width: 100%; 
+  }
+}
+
+
+/*************************************************************************************************/
+
+/*************************************************************************************************/
+
+    </style>
+    </head>
+    
+    <body>
+    
+    <div class="home_black_version">
+        <header class="header_area header_black">
+            <!-- header top starts -->
+            <div class="header_top">
+                <div class="container">
+                    <div class="row align-items-center">
+    
+                        <div class="col-lg-6 col-md-6">
+                            <h1 style="font-size: 27px; color: #57aaf3;">Ambica</h1>
+                        </div>
+                        
+                        <div class="col-lg-6 col-md-6">
+                            <div class="top_right text-right">
+                                <ul>
+                                    <!-- <li class="language">
+                                        <a href="#">English <i class="ion-chevron-down"></i></a>
+                                        <ul class="dropdown_language">
+                                            <li><a href="#">French</a></li>
+                                            <li><a href="#">Germany</a></li>
+                                            <li><a href="#">Hindi</a></li>
+                                        </ul>
+                                    </li> --> 
+                                    <!-- <li class="currency">
+                                        <a href="#">INR <i class="ion-chevron-down"></i></a>
+                                        <ul class="dropdown_currency">
+                                            <li><a href="#">USD - Dollar</a></li>
+                                            <li><a href="#">EUR - Euro</a></li>
+                                            <li><a href="#">GBP - British Pound</a></li>
+                                        </ul>
+                                    </li> -->
+                                    <li class="top_links">
+                                        <a href="#">My Account <i class="ion-chevron-down"></i></a>
+                                        <ul class="dropdown_links">
+                                            <li><a href="login popup.html">Login</a></li>
+                                            <li><a href="acc.html">Account dashboard</a></li>
+                                            <li><a href="edit.html">Shopping Cart</a></li>
+                                            <li><a href="wishlist.html">Wishlist</a></li>
+                                            <li><a href="#">Logout</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- header top ends -->
+    
+            <!-- header middle starts -->
+            <!--<div class="header_middel">
+                <div class="container">
+                    <div class="row align-items-center">
+    
+                        <div class="col-lg-5">
+                            <div class="home_contact">
+                                <div class="contact_icone">
+                                    <img src="images/icon/icon_phone.png" alt="">
+                                </div>
+                                <div class="contact_box">
+                                    <p>Inquiry / Helpline : <a href="tel: 1234567894">1234567894</a></p>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="col-lg-2 col-md-3 col-4">
+                            <div class="logo">
+                                <a href="index.html"><img src="#" alt=""></a>
+                                <h2 style="    font-size: 27px; color: #57aaf3;">Ambica </h2>
+                            </div>
+                        </div>
+    
+                        <div class="col-lg-5 col-md-7 col-6">
+                            <div class="middel_right">
+                                <div class="search_btn">
+                                    <a href="#"><i class="ion-ios-search-strong"></i></a>
+                                    <div class="dropdown_search">
+                                        <form action="#">
+                                            <input type="text" placeholder="Search Product ....">
+                                            <button type="submit"><i class="ion-ios-search-strong"></i></button>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="wishlist_btn">
+                                    <a href="#"><i class="ion-heart"></i></a>
+                                </div>
+                                <div class="cart_link">
+                                    <a href="#"><i class="ion-android-cart"></i><span class="cart_text_quantity">Rs.
+                                            67,598</span><i class="ion-chevron-down"></i></a>
+                                    <span class="cart_quantity">2</span>
+    
+                                    
+                                    <div class="mini_cart">
+                                        <div class="cart_close">
+                                            <div class="cart_text">
+                                                <h3>cart</h3>
+                                            </div>
+                                            <div class="mini_cart_close">
+                                                <a href="javascript:void(0)"><i class="ion-android-close"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="cart_item">
+                                            <div class="cart_img">
+                                                <a href="#"><img src="images/nav-product/product.jpg" alt=""></a>
+                                            </div>
+                                            <div class="cart_info">
+                                                <a href="#">Earings</a>
+                                                <span class="quantity">Qty : 1</span>
+                                                <span class="price_cart">Rs. 54,599</span>
+                                            </div>
+                                            <div class="cart_remove">
+                                                <a href="#"><i class="ion-android-close"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="cart_item">
+                                            <div class="cart_img">
+                                                <a href="#"><img src="images/nav-product/product2.jpg" alt=""></a>
+                                            </div>
+                                            <div class="cart_info">
+                                                <a href="#">Bracelet</a>
+                                                <span class="quantity">Qty : 1</span>
+                                                <span class="price_cart">Rs. 12,999</span>
+                                            </div>
+                                            <div class="cart_remove">
+                                                <a href="#"><i class="ion-android-close"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="cart_total">
+                                            <span>Subtotal : </span>
+                                            <span>Rs. 67,598</span>
+                                        </div>
+                                        <div class="mini_cart_footer">
+                                            <div class="cart_button view_cart">
+                                                <a href="#">View Cart</a>
+                                            </div>
+                                            <div class="cart_button checkout">
+                                                <a href="#" class="active">Checkout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+    
+            <!-- header middle ends -->
+    
+            <!-- header bottom starts -->
+    
+            <div class="header_bottom sticky-header">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-6 col-md-6 col-6">
+                            <div class="main_menu_inner">
+                                <div class="main_menu">
+                                    <nav>
+                                        <ul>
+                                            <li class="active">
+                                                <a href="index.html">Home <i class="ion-chevron-down"></i></a>
+                                                <ul class="sub_menu">
+                                                    <li><a href="#">Banner</a></li>
+                                                    <li><a href="#">Featured</a></li>
+                                                    <li><a href="#">Collection</a></li>
+                                                    <li><a href="#">Best Selling</a></li>
+                                                    <li><a href="#">News</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="category.html">Category <i class="ion-chevron-down"></i></a>
+                                                <ul class="mega_menu">
+                                                    <li>
+                                                        <a href="women.html">Women</a>
+                                                        <ul>
+                                                            <li><a href="earing.html">Earring</a></li>
+                                                            <li><a href="pendant&necklace.html">Pendant&Necklace</a></li>
+                                                            <li><a href="rings.html">Rings</a></li>
+                                                            <li><a href="anklets.html">Anklets</a></li>
+                                                            <li><a href="braclet.html">Bracelets</a></li>
+                                                            <li class="has-submenu">
+                                                                <a href="#">Other Category</a>
+                                                                <ul class="submenu-inline">
+                                                                    <li><a href="jewelleryset.html">Jewellry Set</a></li>
+                                                                    <li><a href="chains&mangalsutra.html">Chains & Mangalsutra</a></li>
+                                                                    <li><a href="nosepins.html">Nose pins & Rings</a></li>
+                                                                    <li><a href="toerings.html">Toe rings</a></li>
+                                                                    <li><a href="bangals.html">Bangles</a></li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <a href="men.html">Men</a>
+                                                        <ul>
+                                                            <li><a href="men_ring.html">Ring</a></li>
+                                                            <li><a href="men_pendant.html">Pendant&Chains</a></li>
+                                                            <li><a href="men_braclet.html">Bracelet</a></li>
+                                                            <li><a href="men_earing.html">Earing</a></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="latestcollection.html">Latest Collections <i class="ion-chevron-down"></i></a>
+                                                <ul class="sub_menu pages">
+                                                    <li><a href="wingsofwonder.html">Wings On Wonder</a></li>
+                                                    <li><a href="cherryontop.html">Cherry on Pop</a></li>
+                                                    <li><a href="loveinparis.html">Love in paris</a></li>
+                                                    <li><a href="justarrived.html">Just Arrived</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="offer.html">Offer</a></li>
+                                            <li><a href="about.html">About Us</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-6">
+                            <div class="middel_right">
+                                <div class="search_btn">
+                                    <a href="#"><i class="ion-ios-search-strong"></i></a>
+                                    <div class="dropdown_search">
+                                        <form action="#">
+                                            <input type="text" placeholder="Search Product ....">
+                                            <button type="submit"><i class="ion-ios-search-strong"></i></button>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="wishlist_btn">
+                                    <a href="#"><i class="ion-heart"></i></a>
+                                </div>
+                                <div class="cart_link">
+                                    <a href="#"><i class="ion-android-cart"></i><span class="cart_text_quantity">Rs.
+                                            67,598</span><i class="ion-chevron-down"></i></a>
+                                    <span class="cart_quantity">2</span>
+    
+                                    <!-- mini cart -->
+                                    <div class="mini_cart">
+                                        <div class="cart_close">
+                                            <div class="cart_text">
+                                                <h3>cart</h3>
+                                            </div>
+                                            <div class="mini_cart_close">
+                                                <a href="javascript:void(0)"><i class="ion-android-close"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="cart_item">
+                                            <div class="cart_img">
+                                                <a href="#"><img src="images/nav-product/product.jpg" alt=""></a>
+                                            </div>
+                                            <div class="cart_info">
+                                                <a href="#">Earings</a>
+                                                <span class="quantity">Qty : 1</span>
+                                                <span class="price_cart">Rs. 54,599</span>
+                                            </div>
+                                            <div class="cart_remove">
+                                                <a href="#"><i class="ion-android-close"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="cart_item">
+                                            <div class="cart_img">
+                                                <a href="#"><img src="images/nav-product/product2.jpg" alt=""></a>
+                                            </div>
+                                            <div class="cart_info">
+                                                <a href="#">Bracelet</a>
+                                                <span class="quantity">Qty : 1</span>
+                                                <span class="price_cart">Rs. 12,999</span>
+                                            </div>
+                                            <div class="cart_remove">
+                                                <a href="#"><i class="ion-android-close"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="cart_total">
+                                            <span>Subtotal : </span>
+                                            <span>Rs. 67,598</span>
+                                        </div>
+                                        <div class="mini_cart_footer">
+                                            <div class="cart_button view_cart">
+                                                <a href="#">View Cart</a>
+                                            </div>
+                                            <div class="cart_button checkout">
+                                                <a href="#" class="active">Checkout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- mini cart ends  -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- header bottom ends -->
+        </header>
+
+
+        <!-------------------------------------slider section------------------------------------------------------>
+        <div class="slideshow-container">
+
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+                <div class="numbertext"></div>
+                <img src="images/men/menslider5.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext"></div>
+                <img src="images/women/womenslider1.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext"></div>
+                <img src="images/men/menslider2.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext"></div>
+                <img src="images/women/womenslider4.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext"></div>
+                <img src="images/men/menslider3.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext"></div>
+                <img src="images/women/womenslider2.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext"></div>
+                <img src="images/men/menslider4.jpg" style="width:100%">
+            </div>
+        </div>
+
+        <div class="Recommended-for-You">
+            <h2>Women's Jewellery</h2>
+        </div>
+
+        <div class="horizontal-scroll-wrapper">
+            <div class="horizontal-scroll-container">
+                <!-- Card 1 -->
+                <a href="anklets.html" class="card">
+                    <img src="images/womenpage/Anklets.jpg" alt="Anklets Image">
+                    <div class="card-content">
+                        <h2>Anklets</h2>
+                    </div>
+                </a>
+                <!-- Card 2 -->
+                <a href="braclet.html" class="card">
+                    <img src="images/womenpage/bracelets.jpg" alt="Bracelets Image">
+                    <div class="card-content">
+                        <h2>Bracelets</h2>
+                    </div>
+                </a>
+                <!-- Card 3 -->
+                <a href="bangals.html" class="card">
+                    <img src="images/womenpage/bangle.jpg" alt="Chains Image">
+                    <div class="card-content">
+                        <h2>Bangles</h2>
+                    </div>
+                </a>
+                <!-- Card 4 -->
+                <a href="earing.html" class="card">
+                    <img src="images/womenpage/earings.jpg" alt="Earings Image">
+                    <div class="card-content">
+                        <h2>Earings</h2>
+                    </div>
+                </a>
+                <!-- Card 5 -->
+                <a href="rings.html" class="card">
+                    <img src="images/womenpage/rings.jpg" alt="Rings Image">
+                    <div class="card-content">
+                        <h2>Rings</h2>
+                    </div>
+                </a>
+                <!-- Card 6 -->
+                <a href="jewelleryset.html" class="card">
+                    <img src="images/womenpage/sets.jpg" alt="Sets Image">
+                    <div class="card-content">
+                        <h2>Sets</h2>
+                    </div>
+                </a>
+                <!-- Card 7 -->
+                <a href="pendant&necklace.html" class="card">
+                    <img src="images/womenpage/pendants.jpg" alt="Pendants Image">
+                    <div class="card-content">
+                        <h2>Pendants</h2>
+                    </div>
+                </a>
+                <!-- Card 8 -->
+                <a href="toerings.html" class="card">
+                    <img src="images/womenpage/toerings.jpg" alt="Toe Rings Image">
+                    <div class="card-content">
+                        <h2>Toe Rings</h2>
+                    </div>
+                </a>
+                <!-- Card 9 -->
+                <a href="nosepins.html" class="card">
+                    <img src="images/womenpage/nose pins.jpg" alt="Nose Pins Image">
+                    <div class="card-content">
+                        <h2>Nose Pins</h2>
+                    </div>
+                </a>
+                <!-- Card 10 -->
+                <a href="chains&mangalsutra.html" class="card">
+                    <img src="images/womenpage/Mangalsutras.jpg" alt="Mangalsutras Image">
+                    <div class="card-content">
+                        <h2>Mangalsutras&Chains</h2>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="banner_area">
+            <div class="banner-image">
+                <a href="women.html">
+                    <img src="images/womenpage/bannerwomen1.jpg" alt="Silver Jewelry">
+                </a>
+            </div>
+        </div>
+
+        <div class="essentials-for-you">
+            <h2>Essentials For You</h2>
+        </div>
+        
+        <!-- Essentials For You Section Starts -->
+        <div class="essentials-for-you">
+        <!--<h2>Essentials For You</h2> -->    
+            <div class="essentials-row">
+            <!-- Image 1 -->
+                <div class="card-essentials">
+                    <a href="women.html">
+                        <img src="images/womenpage/essentials/essentials1.jpg" class="card-img-top" alt="Essential Item 1">
+                    </a>
+                </div>
+
+                <div class="card-essentials">
+                    <a href="women.html">
+                        <img src="images/womenpage/essentials/essentials2.jpg" class="card-img-top" alt="Essential Item 1">
+                    </a>
+                </div>
+
+                <div class="card-essentials">
+                    <a href="women.html">
+                        <img src="images/womenpage/essentials/essentials3.jpg" class="card-img-top" alt="Essential Item 1">
+                    </a>
+                </div>
+
+                <div class="card-essentials">
+                    <a href="women.html">
+                        <img src="images/womenpage/essentials/essentials4.jpg" class="card-img-top" alt="Essential Item 1">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- Essentials For You Section Ends -->      
+
+        <!-- slider section starts -->
+        <div class="slider_area slider_black owl-carousel">
+            <div class="single_slider" data-bgimg="images/womenpage/womenpage_banner1.jpg">
+            </div>
+            <div class="single_slider" data-bgimg="images/womenpage/womenpage_banner2.jpg">
+            </div>
+            <div class="single_slider" data-bgimg="images/womenpage/womenpage_banner1.jpg">
+            </div>
+        </div>
+        <!-- slider section ends -->
+
+        
+        <div class="Recommended-for-You">
+            <h2>Men's Jewellery</h2>
+        </div>
+
+
+        <div class="custom-horizontal-scroll-wrapper">
+            <div class="custom-horizontal-scroll-container">
+                <!-- Card 1 -->
+                <a href="men_ring.html" class="custom-card">
+                    <img src="images/menspage/ring.jpg" alt="Anklets Image">
+                    <div class="custom-card-content">
+                        <h2>Ring</h2>
+                    </div>
+                </a>
+                <!-- Card 2 -->
+                <a href="men_braclet.html" class="custom-card">
+                    <img src="images/menspage/braclets.jpg" alt="Bracelets Image">
+                    <div class="custom-card-content">
+                        <h2>Bracelets</h2>
+                    </div>
+                </a>
+                <!-- Card 3 -->
+                <a href="men_pendant.html" class="custom-card">
+                    <img src="images/menspage/pendant.jpg" alt="Chains Image">
+                    <div class="custom-card-content">
+                        <h2>Pendants & Chains</h2>
+                    </div>
+                </a>
+                <!-- Card 4 -->
+                <a href="men_earing.html" class="custom-card">
+                    <img src="images/menspage/earing.jpg" alt="Earings Image">
+                    <div class="custom-card-content">
+                        <h2>Earings</h2>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+
+        <div class="banner_area">
+            <div class="banner-image">
+                <a href="men.html">
+                    <img src="images/womenpage/bannermen1.jpg" alt="Silver Jewelry">
+                </a>
+            </div>
+        </div>
+        
+
+        
+        <div class="centered-offers-i">
+            <h2>CHOOSE YOUR FAVOURITE</h2>
+            <p>Offers On All Colours</p>
+        </div>
+
+        <div class="favorites-container">
+            <div class="favorites-row">
+                <div class="favorite-box">
+                    <div class="favorite-content">
+                        <div class="favorite-image">
+                            <a href="oxidised.html"><img src="images/womenpage/oxidised.jpg" alt="Favorite Item 1"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="favorite-box">
+                    <div class="favorite-content">
+                        <div class="favorite-image">
+                            <a href="silver.html"><img src="images/womenpage/silver.jpg" alt="Favorite Item 2"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+    
+
+    <!-- footer section starts -->
+    <footer class="footer_widgets footer_black">
+        <div class="container">
+            <div class="footer_top">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-8">
+                        <div class="widgets_container contact_us">
+                            <h3>About Ambica</h3>
+                            <div class="footer_contact">
+                                <p>Address : Shop No 43\3b,<br> Vitthal Mangal Office Below,<br> Somnath Nagar,  Vadgaon Sheri, Pune (411014)</p>
+                                <p>Phone : <a href="tel:(+91)8329566392">(+91)8329566392</a></p>
+                                <p>Email : Ambicajewlers@gmail.com</p>
+                                <ul>
+                                    <li><a href="#"><i class="ion-social-facebook"></i></a></li>
+                                    <li><a href="#"><i class="ion-social-snapchat"></i></a></li>
+                                    <li><a href="#"><i class="ion-social-whatsapp"></i></a></li>
+                                    <li><a href="#"><i class="ion-social-instagram"></i></a></li>
+                                    <li><a href="#"><i class="ion-social-youtube"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-sm-4 col-6">
+                        <div class="widgets_container widget_menu">
+                            <h3>Information</h3>
+                            <div class="footer_menu">
+                                <ul>
+                                    <li><a href="about.html">About Us</a></li>
+                                    <li><a href="blog.html">Blog</a></li>
+                                    <li><a href="Contact.html">Contact</a></li>
+                                    <li><a href="#">Services</a></li>
+                                    <li><a href="category.html">Collection</a></li>
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-sm-5 col-6">
+                        <div class="widgets_container widget_menu">
+                            <h3>My Account</h3>
+                            <div class="footer_menu">
+                                <ul>
+                                    <li><a href="account.html">My Account</a></li>
+                                    <li><a href="Contact.html">Contact</a></li>
+                                    <li><a href="wishlist.html">Wishlist</a></li>
+                                    
+                                    <li><a href="checkout.html">Checkout</a></li>
+                                    <li><a href="help.html">Frequently Questions</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-7">
+                        <div class="widgets_container product_widget">
+                            <h3>Top Rated Products</h3>
+                            <div class="simple_product">
+                                <div class="simple_product_items">
+                                    <div class="simple_product_thumb">
+                                        <a href="#"><img src="images/product/14.jpg" alt=""></a>
+                                    </div>
+                                    <div class="simple_product_content">
+                                        <div class="tag_cate">
+                                            <a href="#">Women,</a>
+                                            <a href="#">Earrings</a>
+                                        </div>
+                                        <div class="product_name">
+                                            <h3><a href="#">Bracelet</a></h3>
+                                        </div>
+                                        <div class="product_price">
+                                            <span class="old_price">Rs. 45612.54</span>
+                                            <span class="current_price">Rs. 41612.54</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="simple_product_items">
+                                    <div class="simple_product_thumb">
+                                        <a href="#"><img src="images/product/28.jpg" alt=""></a>
+                                    </div>
+                                    <div class="simple_product_content">
+                                        <div class="tag_cate">
+                                            <a href="#">Women,</a>
+                                            <a href="#">Earrings</a>
+                                        </div>
+                                        <div class="product_name">
+                                            <h3><a href="#">Ring</a></h3>
+                                        </div>
+                                        <div class="product_price">
+                                            <span class="old_price">Rs. 75612.54</span>
+                                            <span class="current_price">Rs. 71612.54</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_bottom">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="copyright_area">
+                            <p>Copyright &copy; 2020 <a href="#">Ambica</a> All rights Reserved.<br> Designed by <a href="#">Fourise Software Solution Pvt. Ltd.</a></p>
+                            <img src="images/icon/papyel2.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+    <!-- footer section ends -->
+</div>
+
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <!-- JavaScript Bundle with Popper.js -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

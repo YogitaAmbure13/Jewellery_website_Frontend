@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ambica Jewellers Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color:aliceblue;
+            margin: 0;
+        }
+        .login-container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+        .login-container h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .login-container form {
+            display: flex;
+            flex-direction: column;
+        }
+        .login-container input[type="email"],
+        .login-container input[type="password"],
+        .login-container input[type="text"] {
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .login-container button {
+            padding: 10px;
+            background-color: #a5c3dd;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .login-container button:hover {
+            background-color: #57aaf3;
+        }
+        .login-container .links {
+            margin-top: 20px;
+        }
+        .login-container .links a {
+            color: #57aaf3;
+            text-decoration: none;
+        }
+        .login-container .links a:hover {
+            text-decoration: underline;
+        }
+        .tab {
+            display: inline-block;
+            margin: 20px;
+            cursor: pointer;
+            color: #57aaf3;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .tab.active {
+            border-bottom: 2px solid #57aaf3;
+        }
+    </style>
+    <script>
+        function showTab(tab) {
+            document.getElementById('password-login').style.display = 'none';
+            document.getElementById('otp-login').style.display = 'none';
+            document.getElementById('password-tab').classList.remove('active');
+            document.getElementById('otp-tab').classList.remove('active');
+            if (tab === 'password') {
+                document.getElementById('password-login').style.display = 'block';
+                document.getElementById('password-tab').classList.add('active');
+            } else {
+                document.getElementById('otp-login').style.display = 'block';
+                document.getElementById('otp-tab').classList.add('active');
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Log in to Ambica JWELLERS</h2>
+        <div>
+            <a id="password-tab" class="tab active" href="#" onclick="showTab('password')">Login with password</a>
+            <a id="otp-tab" class="tab" href="#" onclick="showTab('otp')">Login with OTP</a>
+        </div>
+        <div id="password-login">
+            <form action="login_process.html" method="POST">
+                <input type="email" name="email" placeholder="Enter Email Address" required>
+                <input type="password" name="password" placeholder="Enter Password" required>
+                <button type="submit">LOG ME IN</button>
+            </form>
+        </div>
+        <div id="otp-login" style="display: none;">
+            <form action="otp_login_process.html" method="POST">
+                <input type="text" name="phone" placeholder="Enter Phone Number" required>
+                <button type="submit">LOG ME IN</button>
+            </form>
+        </div>
+        <div class="links">
+            <a href="#">Forgot Password?</a><br>
+            New to Ambica JWELLERS? <a href="registration page.html">Register Account</a>
+        </div>
+    </div>
+</body>
+</html>

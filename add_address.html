@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add/Edit Address</title>
+    <style>
+      body {
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: aliceblue;
+        color: #333;
+    }
+
+    .container {
+        max-width: 600px;
+        margin: 0 auto;
+        margin-top: 60px; 
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        font-size: 24px;
+        color: #024dbc;        
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .address-form {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .address-form label {
+        display: block;
+        margin-bottom: 5px;
+        font-size: 14px;
+        color: #333;
+    }
+
+    .address-form input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+    }
+
+    button {
+        padding: 10px 15px;
+        background-color: #57aaf3;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        font-size: 14px;
+        border-radius: 4px;
+        margin-top: 10px;
+    }
+
+    button:hover {
+        background-color: #024dbc;
+    }
+
+    .cancel-btn {
+        background-color: #ccc;
+        border: 1px solid #aaa;
+        margin-left: 10px;
+    }
+
+    .cancel-btn:hover {
+        background-color: #bbb;
+        border-color: #999;
+    }
+
+    @media (max-width: 600px) {
+        .container {
+            padding: 10px;
+        }
+
+        h1 {
+            font-size: 20px;
+        }
+
+        button {
+            width: 100%;
+            font-size: 16px;
+            margin: 5px 0;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Add/Edit Address</h1>
+        <form class="address-form">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="John Doe" required>
+
+            <label for="address">Address</label>
+            <input type="text" id="address" name="address" placeholder="123 Main St, Apt 4B" required>
+
+            <label for="city">City</label>
+            <input type="text" id="city" name="city" placeholder="Springfield" required>
+
+            <label for="state">State</label>
+            <input type="text" id="state" name="state" placeholder="IL" required>
+
+            <label for="zip">ZIP Code</label>
+            <input type="text" id="zip" name="zip" placeholder="62701" required>
+
+            <button type="submit">Save Address</button>
+            <button type="button" class="cancel-btn" onclick="window.history.back()">Cancel</button>
+        </form>
+    </div>
+</body>
+</html>

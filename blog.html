@@ -1,0 +1,3123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Jewelry Blog</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <style>
+    
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700&display=swap");
+    
+    /* common styling */
+* {
+box-sizing: border-box;
+}
+*, *::after, *::before {
+box-sizing: border-box;
+}
+
+html, body {
+height: 100%;
+}
+body {
+line-height: 24px;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+visibility: visible;
+font-family: "Poppins", sans-serif;
+color: aliceblue;
+}
+
+h1, h2, h3, h4, h5, h6 {
+font-weight: 400;
+margin-top: 0;
+font-family: "Baloo 2", cursive;
+}
+
+h1 {
+font-size: 48px;
+line-height: 1;
+font-weight: 700;
+}
+h2 {
+font-size: 36px;
+line-height: 36px;
+}
+h3 {
+font-size: 30px;
+line-height: 30px;
+}
+h4 {
+font-size: 16px;
+line-height: 19px;
+font-weight: 700;
+}
+h5 {
+font-size: 14px;
+line-height: 18px;
+}
+h6 {
+font-size: 12px;
+line-height: 14px;
+}
+
+p:last-child {
+margin-bottom: 0;
+}
+a, button {
+color: inherit;
+line-height: inherit;
+text-decoration: none;
+cursor: pointer;
+}
+
+.btn:focus {
+box-shadow: none;
+}
+
+a, button, img, input, span {
+transition: all 0.3s ease 0s;
+}
+
+*:focus {
+outline: none !important;
+}
+a:focus {
+color: inherit;
+outline: none;
+text-decoration: none;
+}
+
+a:hover {
+text-decoration: none;
+}
+
+button, input[type="submit"] {
+cursor: pointer;
+}
+
+img {
+max-width: 100%;
+height: auto;
+}
+
+ul {
+list-style: outside none none;
+margin: 0;
+padding: 0;
+/* width: 120%; */
+}
+
+.home_black_version {
+background: aliceblue;
+}
+
+.header_black .header_top {
+border-bottom: 1px solid #a5c3dd;
+}
+
+.header_black .social_icone ul li a {
+background: #b6d7f4;
+color: black;
+}
+
+.header_black .social_icone ul li a:hover {
+background: #57aaf3;
+}
+
+.header_black .top_right > ul > li::before {
+background: aliceblue;
+}
+
+.header_black .top_right > ul > li:hover > a {
+color: #57aaf3;
+}
+
+.header_black .top_right > ul > li > a {
+color: black;
+font-size: large;
+}
+
+.header_black .top_right > ul > li > a:not([href]):not([tabindex]) {
+color: black;
+}
+.header_black .top_right > ul > li > a:not([href]):not([tabindex]):hover {
+color: #57aaf3;
+}
+
+.header_black .dropdown_language li,
+.header_black .dropdown_currency li,
+.header_black .dropdown_links li {
+border-bottom: 1px solid #a5c3dd;
+}
+
+.header_black .dropdown_language li a:hover,
+.header_black .dropdown_currency li a:hover,
+.header_black .dropdown_links li a:hover {
+color: #57aaf3;
+}
+
+.header_black .dropdown_links {
+left: -98%;
+}
+
+.social_icone ul li {
+display: inline-block;
+margin-left: 5px;
+}
+
+.social_icone ul li:first-child {
+margin-left: 0;
+}
+
+.social_icone ul li a {
+background: #a5c3dd;
+color: #aaaaaa;
+display: block;
+width: 30px;
+height: 30px;
+line-height: 30px;
+text-align: center;
+border-radius: 50%;
+}
+
+.social_icone ul li a:hover {
+background: #57aaf3;
+color: black;
+}
+
+.top_right > ul > li {
+display: inline-block;
+position: relative;
+padding-left: 20px;
+margin-left: 20px;
+}
+
+.top_right > ul > li:hover ul.dropdown_currency {
+top: 100%;
+opacity: 1;
+visibility: visible;
+}
+
+.top_right > ul > li:hover ul.dropdown_language,
+.top_right > ul > li:hover .header_black ul.dropdown_currency,
+.header_black .top_right > ul > li:hover ul.dropdown_currency,
+.top_right > ul > li:hover .header_black ul.dropdown_links,
+.header_black .top_right > ul > li:hover ul.dropdown_links {
+top: 100%;
+opacity: 1;
+visibility: visible;
+}
+
+.top_right > ul > li:hover ul.dropdown_links {
+top: 100%;
+opacity: 1;
+visibility: visible;
+}
+
+.top_right > ul > li:first-child {
+padding-left: 0;
+margin-left: 0;
+}
+.top_right > ul > li::before {
+position: absolute;
+content: "";
+width: 1px;
+height: 15px;
+background: #a5c3dd;
+top: 50%;
+left: 0px;
+transform: translateY(-50%);
+}
+
+.top_right > ul > li:first-child::before {
+display: none;
+}
+
+.top_right > ul > li > a {
+color: aliceblue;
+text-transform: capitalize;
+line-height: 26px;
+font-size: 12px;
+cursor: pointer;
+display: block;
+font-weight: 400;
+padding: 9px 0;
+}
+
+.top_right > ul > li > a i {
+margin-left: 3px;
+font-size: 10px;
+}
+
+.dropdown_currency,
+.dropdown_language,
+.dropdown_links,
+.header_black .dropdown_currency,
+.header_black .dropdown_links {
+position: absolute;
+background: aliceblue;
+box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+min-width: 200px;
+text-align: center;
+top: 125%;
+transition: all 0.3s ease-out;
+overflow: hidden;
+left: -154%;
+z-index: 9999;
+padding: 0 15px;
+border-radius: 5px;
+opacity: 0;
+visibility: hidden;
+}
+
+.header_black .dropdown_language,
+.header_black .dropdown_currency,
+.header_black .dropdown_links {
+background: aliceblue;
+}
+.dropdown_language li a,
+.header_black .dropdown_currency li a,
+.header_black .dropdown_links li a {
+text-transform: capitalize;
+display: block;
+font-size: 12px;
+color: aliceblue;
+text-align: center;
+}
+
+.dropdown_language li a:hover,
+.header_black .dropdown_currency li a:hover,
+.header_black .dropdown_links li a:hover {
+color: #57aaf3;
+}
+
+.header_black .dropdown_language li:last-child,
+.header_black .dropdown_currency li:last-child,
+.header_black .dropdown_links li:last-child {
+border-bottom: 0;
+}
+.header_black .dropdown_language li a,
+.header_black .dropdown_currency li a,
+.header_black .dropdown_links li a {
+color: black;
+}
+
+.header_black .dropdown_links {
+left: -98%;
+}
+
+.dropdown_language li,
+.header_black .dropdown_currency li,
+.header_black .dropdown_links li {
+border-bottom: 1px solid #a5c3dd;
+line-height: 36px;
+padding: 5px 0;
+}
+
+.dropdown_language li:last-child,
+.header_black .dropdown_currency li:last-child,
+.header_black .dropdown_links li:last-child {
+border-bottom: 0;
+}
+.dropdown_language li a:hover,
+.header_black .dropdown_currency li a:hover,
+.header_black .dropdown_links li a:hover {
+color: #57aaf3;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+.header_black .top_right > ul > li {
+  display: block;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.header_black .top_right > ul > li::before {
+  display: none;
+}
+
+.header_black .dropdown_currency,
+.header_black .dropdown_language,
+.header_black .dropdown_links {
+  left: 0;
+  min-width: 100%;
+  text-align: left;
+  top: 100%;
+}
+
+.social_icone ul li {
+  margin-left: 0;
+}
+}
+
+@media (max-width: 576px) {
+body {
+  font-size: 12px;
+}
+
+h1 {
+  font-size: 36px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 14px;
+}
+h5 {
+  font-size: 12px;
+}
+h6 {
+  font-size: 10px;
+}
+
+.top_right > ul > li > a {
+  font-size: 10px;
+}
+
+.social_icone ul li a {
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+}
+}
+
+    /* *****************Middle Header******************** */
+    
+    .header_middel {
+      padding: 40px 0;
+      border-bottom: 1px solid  #a5c3dd   ;
+    }
+    
+    .header_black .header_middel {
+      border-bottom: 1px solid #a5c3dd;
+    }
+    
+    .home_contact {
+      display: flex;
+    }
+    
+    .home_contact .contact_box {
+      padding-right: 25px;
+      margin-right: 25px;
+      border-right: 2px solid #a5c3dd;
+    }
+    .header_black .home_contact {
+      align-items: center;
+    }
+    .header_black .contact_box {
+      margin-left: 15px;
+    }
+    
+    .header_black .contact_box p {
+      color: #57aaf3;
+      font-size: 14px;
+    }
+    
+    .logo {
+      padding: 0 20px;
+    }
+    
+    .middel_right {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+    .search_btn {
+      position: relative;
+    }
+    
+    .search_btn:hover .dropdown_search {
+      opacity: 1;
+      visibility: visible;
+      top: 100%;
+    }
+    
+    .search_btn a {
+      width: 45px;
+      height: 45px;
+      border-radius: 3px;
+      text-align: center;
+      line-height: 45px;
+      border: 1px solid #a5c3dd;
+      color: black;
+      font-size: 20px;
+      display: block;
+    }
+    
+    .search_btn a:hover {
+      color: #57aaf3;
+    }
+    .header_black .search_btn form button {
+      position: absolute;
+      top: 0;
+      right: 10px;
+      border: 0;
+      background: inherit;
+      color: black;
+      font-size: 20px;
+      height: 100%;
+    }
+    
+    .header_black .search_btn form button:hover {
+      color: #57aaf3;
+    }
+    
+    .dropdown_search {
+      position: absolute;
+      right: 0;
+      opacity: 0;
+      visibility: hidden;
+      top: 120%;
+      transition: 0.3s;
+    }
+    
+    .dropdown_search form {
+      position: relative;
+      width: 280px;
+      border: 1px solid #a5c3dd;
+     background: aliceblue;
+      z-index: 9;
+    }
+    
+    .dropdown_search form input {
+      border: 0;
+      width: 100%;
+      height: 50px;
+      line-height: 50px;
+      padding: 0 67px 0 10px;
+      background: inherit;
+      font-size: 12px;
+      color: #a4a4a4;
+    }
+    .dropdown_search form button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background:  #a5c3dd   ;
+      width: 59px;
+      height: 100%;
+      border: 0;
+      border-left: 1px solid #a5c3dd;
+      padding: 0;
+      font-size: 20px;
+      background: none;
+      color: black;
+    }
+    
+    .header_black .dropdown_search form {
+      background: aliceblue;
+      border: 1px solid #a5c3dd;
+    }
+    
+    .header_black .wishlist_btn {
+      margin-left: 18px;
+    }
+    
+    .header_black .wishlist_btn a {
+      width: 45px;
+      height: 45px;
+      border-radius: 3px;
+      text-align: center;
+      line-height: 45px;
+      font-size: 20px;
+      display: block;
+      blackborder: 1px solid #a5c3dd;
+      color: black;
+    }
+    
+    .header_black .wishlist_btn a:hover {
+      color: #57aaf3;
+    }
+    
+    .cart_link {
+      margin-left: 25px;
+      position: relative;
+    }
+    
+    .cart_link span.cart_quantity {
+      position: absolute;
+      left: -11px;
+      width: 20px;
+      line-height: 20px;
+      text-align: center;
+      background: #57aaf3;
+      color: black;
+      border-radius: 50%;
+      top: 12px;
+    }
+    
+    .cart_link > a {
+      font-size: 14px;
+      font-weight: 500;
+      text-transform: capitalize;
+      color: #212121;
+      border: 1px solid  #a5c3dd   ;
+      padding: 11px 10px 13px 18px;
+      line-height: 15px;
+      border-radius: 3px;
+      display: block;
+    }
+    .cart_link > a:hover {
+      color: #57aaf3;
+    }
+    
+    .cart_link > a i.ion-android-cart {
+      font-size: 19px;
+      margin-right: 10px;
+      border-right: 1px solid  #a5c3dd   ;
+      position: relative;
+      top: 3px;
+      padding-right: 10px;
+    }
+    
+    .cart_link > a i.ion-chevron-down {
+      font-size: 17px;
+      margin-left: 3px;
+    }
+    .header_black .cart_link span.cart_quantity {
+      background: #57aaf3;
+    }
+    
+    .header_black .cart_link > a {
+      color: black;
+      blackborder: 1px solid #a5c3dd;
+    }
+    
+    .header_black .cart_link > a:hover {
+      color: #57aaf3;
+    }
+    
+    .header_black .cart_link > a i.ion-android-cart {
+      border-right: 1px solid aliceblue;
+    }
+    
+    .mini_cart {
+      position: fixed;
+      min-width: 355px;
+      height: 100%;
+      padding: 18px 20px 33px;
+     background: aliceblue;
+      z-index: 999;
+      right: 0;
+      top: 0;
+      transition: 0.5s;
+      transform: translateX(100%);
+    }
+    
+    .mini_cart.active {
+      transform: translateX(0);
+      transition: 0.5s;
+    }
+    
+    .header_black .mini_cart {
+      background: aliceblue;
+      blackborder: 1px solid #a5c3dd;
+    }
+    
+    .cart_close {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid  #a5c3dd   ;
+      padding-bottom: 10px;
+    }
+    
+    .header_black .cart_close {
+       border-bottom: 1px solid #a5c3dd;   
+    }
+    
+    .cart_text h3 {
+      font-size: 18px;
+      text-transform: capitalize;
+      font-weight: 600;
+      margin-bottom: 0;
+      color: black;
+    }
+    
+    .mini_cart_close > a {
+      font-size: 25px;
+      color: black;
+    }
+    
+    .mini_cart_close > a:hover {
+      color: #57aaf3;
+    }
+    
+    .cart_item {
+      padding: 20px 0;
+       border-bottom: 1px solid #a5c3dd;   
+      display: flex;
+      overflow: hidden;
+    }
+    
+    .cart_img {
+      width: 100px;
+      margin-right: 10px;
+    }
+    
+    .cart_info {
+      width: 58%;
+    }
+    
+    .cart_info a {
+      font-weight: 400;
+      color: black;
+      text-transform: capitalize;
+      font-size: 14px;
+    }
+    
+    .cart_info a:hover {
+      color: #57aaf3;
+    }
+    
+    .cart_info span {
+      display: block;
+    }
+    
+    .cart_info span.price_cart {
+      color: #57aaf3;
+      font-weight: 500;
+    }
+    
+    .header_black .cart_info span.quantity {
+      color: #a0a0a0;
+    }
+    
+    .cart_remove {
+      width: 10%;
+      text-align: right;
+    }
+    
+    .cart_remove a {
+      color: #eaeaea;
+      font-size: 18px;
+    }
+    
+    .cart_remove a:hover {
+      color: #57aaf3;
+    }
+    
+    .cart_total {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px 0;
+    }
+    
+    .cart_total span {
+      color: black;
+      font-size: 14px;
+      font-weight: 400;
+    }
+    
+    .mini_cart_footer {
+      padding: 0 25px 25px;
+      background: aliceblue;
+    }
+    
+    .cart_button a {
+      text-transform: uppercase;
+      border-radius: 5px;
+      font-weight: 400;
+      color: black;
+      background: #57aaf3;
+      display: block;
+      text-align: center;
+      line-height: 20px;
+      margin-bottom: 0;
+      padding: 13px 0 11px;
+    }
+    
+    .cart_button a:hover {
+      background: #57aaf3;
+    }
+    
+    .cart_button.view_cart {
+      padding-bottom: 15px;
+    }
+    
+    .cart_button a.active {
+      background: #57aaf3;
+    }
+    
+    .cart_button a.active:hover {
+      background: #e9c88f;
+      color: #000000;
+      font-weight: 600;
+    }
+    
+    
+    
+    /* ************************ Header Down ( 3rd ) ******************** */
+    
+    .header_bottom.sticky-header.sticky .main_menu_inner {
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .header_bottom.sticky-header.sticky .logo_sticky {
+      display: block;
+    }
+    
+    .header_black .header_bottom {
+       border-bottom: 1px solid #a5c3dd;   
+    }
+    
+    .sticky-header.sticky {
+      position: fixed;
+      z-index: 99;
+      width: 100%;
+      top: 0;
+      background: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.11);
+      animation-name: fadeInDown;
+      animation-duration: 900ms;
+      animation-timing-function: cubic-bezier(0.2, 1, 0.22, 1);
+      animation-delay: 0s;
+      animation-iteration-count: 1;
+      animation-direction: normal;
+      animation-fill-mode: none;
+      animation-play-state: running;
+    }
+    
+    .header_bottom.sticky-header.sticky .main_menu_inner {
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .header_black .sticky-header.sticky {
+      background: #b6d7f4;
+      box-shadow: 0 1px 3px Black;
+    }
+    
+    .main_menu_inner {
+      text-align: center;
+    }
+    
+    .logo_sticky {
+      display: none;
+      margin-right: 35px;
+    }
+    
+    .logo_sticky a img {
+      max-width: 120px;
+    }
+    
+    .main_menu nav > ul > li {
+      display: inline-block;
+      position: relative;
+    }
+    
+    .main_menu nav > ul > li > a i {
+      margin-left: 2px;
+    }
+    .main_menu nav > ul > li:hover > a {
+      color: #57aaf3;
+    }
+    
+    .main_menu nav > ul > li.active > a {
+      color: #57aaf3;
+    }
+    
+    .main_menu nav > ul > li:first-child a {
+      padding-left: 0;
+    }
+    
+    .main_menu nav > ul > li:last-child a {
+      padding-right: 0;
+    }
+    
+    .main_menu nav > ul > li ul.sub_menu {
+      position: absolute;
+      min-width: 200px;
+      padding: 30px 25px;
+     background: aliceblue;
+      border: 1px solid  #a5c3dd   ;
+      transform: perspective(600px) rotateX(-90deg);
+      transform-origin: 0 0 0;
+      left: 0;
+      right: auto;
+      opacity: 0;
+      visibility: hidden;
+      transition: 0.5s;
+      z-index: 9;
+      top: 100%;
+      text-align: left;
+    }
+    
+    .main_menu nav > ul > li ul.sub_menu > li > a {
+      font-size: 15px;
+    }
+    
+    .main_menu nav ul li:hover .sub_menu,
+    .main_menu nav ul li:hover .mega_menu {
+      opacity: 1;
+      visibility: visible;
+      transform: perspective(600px) rotateX(0deg);
+    }
+    
+    .main_menu nav ul li ul li.active a,
+    .main_menu nav ul li ul li a:hover {
+      color: #c09578;
+    }
+    
+    .main_menu nav > ul > li > ul > li > a {
+      color: #808080;
+      font-size: 13px;
+      text-transform: capitalize;
+      line-height: 18px;
+      margin-bottom: 15px;
+      display: block;
+      font-weight: 400;
+    }
+    
+    .main_menu nav > ul > li > ul.sub_menu > li:last-child > a {
+      margin-bottom: 0;
+    }
+    .main_menu nav > ul > li > ul.mega_menu li ul li:last-child a {
+      margin-bottom: 0;
+    }
+    
+    .main_menu nav ul li ul.mega_menu {
+      position: absolute;
+      min-width: 580px;
+      padding: 30px 25px 35px;
+     background: aliceblue;
+      border: 1px solid  #a5c3dd   ;
+      transform: perspective(600px) rotateX(-90deg);
+      transform-origin: 0 0 0;
+      left: 0;
+      right: auto;
+      opacity: 0;
+      visibility: hidden;
+      transition: 0.5s;
+      z-index: 9;
+      top: 100%;
+      text-align: left;
+    }
+    
+    .main_menu nav > ul > li > ul.mega_menu > li {
+      width: 33%;
+      float: left;
+    }
+    
+    .main_menu nav > ul > li > ul.mega_menu > li > a {
+      text-transform: uppercase;
+      color: aliceblue;
+      font-weight: 500;
+      margin-bottom: 30px;
+    }
+    
+    .main_menu nav > ul > li > ul.maga_menu > li > a:hover {
+      color: #c09578;
+    }
+    
+    .main_menu nav > ul > li > ul.maga_menu li ul li a {
+      color: #808080;
+      font-size: 13px;
+      line-height: 18px;
+      margin-bottom: 11px;
+      display: block;
+      text-transform: capitalize;
+      font-weight: 400;
+    }
+    
+    .main_menu nav > ul > li > ul.maga_menu li ul li a:hover {
+      color: #c09578;
+    }
+    
+    .main_menu nav ul li ul.sub_menu.pages {
+      left: inherit;
+      right: inherit;
+    }
+    
+    .header_black .main_menu nav > ul > li.active > a {
+      color: #57aaf3;
+    }
+    
+    .header_black .main_menu nav > ul > li:hover > a {
+      color: #57aaf3;
+    }
+    
+    .header_black .main_menu nav > ul > li > a {
+      color: black;
+      font-family: serif;
+      font-weight: 400;
+      text-transform: capitalize;
+      font-size: 18px;
+    }
+    
+    .header_black .main_menu nav > ul > li ul.sub_menu {
+      background: aliceblue;
+      blackborder: 1px solid #a5c3dd;
+    }
+    .header_black .main_menu nav > ul > li ul.sub_menu li a {
+      color: black;
+      font-family: serif;
+    }
+    
+    .header_black .main_menu nav > ul > li ul.sub_menu li a:hover {
+      color: #57aaf3;
+    }
+    
+    .header_black .main_menu nav > ul > li ul.mega_menu {
+      background: aliceblue;
+      blackborder: 1px solid #a5c3dd;
+    }
+    .header_black .main_menu nav > ul > li ul.mega_menu > li > a {
+      color: black;
+      font-family: serif;
+    }
+    .header_black .main_menu nav > ul > li ul.mega_menu > li > a:hover {
+      color: #57aaf3;
+    }
+    .header_black .main_menu nav > ul > li ul.mega_menu > li ul li a {
+      color: black;
+    }
+    
+    .header_black .main_menu nav > ul > li ul.mega_menu > li ul li a:hover {
+      color: #57aaf3;
+    }
+    .ion-chevron-down {
+      font-size: 14px;
+      padding-left: 3px;
+    }
+    
+    .main_menu nav > ul > li > a {
+      display: block;
+      padding: 19px 20px;
+      color: #212121;
+      font-size: 13px;
+      line-height: 26px;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+    
+    .has-submenu {
+      position: relative;
+    }
+    
+    .has-submenu .submenu-inline {
+      display: none; /* Hidden by default */
+      padding: 0;
+      border: none;
+      background: aliceblue; /* Set to match the main menu background */
+      position: absolute;
+      top: 10%; /* Adjust top position to be slightly higher */
+      left: calc(100% - 50px); /* Position to the right of the parent */
+      min-width: 200px;
+      z-index: 10;
+      transform: translateY(-80%); /* Adjust vertical alignment */
+      flex-direction: column; /* Ensure vertical alignment */
+    }
+    
+    .has-submenu:hover .submenu-inline,
+    .has-submenu:focus-within .submenu-inline {
+      display: block; /* Show on hover or when focused */
+    }
+    
+    .has-submenu .submenu-inline li {
+      border-bottom: 0; /* Remove border-bottom */
+    }
+    
+    .has-submenu .submenu-inline li a {
+      padding: 8px 13px; /* Match the padding of the parent menu */
+      white-space: nowrap; /* Prevent text wrapping */
+      color: #212121; /* Default text color */
+      font-size: 14px; /* Match the font size of the parent menu */
+      line-height: 26px; /* Match the line height */
+      text-transform: capitalize; /* Match the text transformation */
+      font-weight: 500; /* Match the font weight */
+    }
+    
+    .header_black .has-submenu .submenu-inline {
+      background: aliceblue ; /* Background for black header submenu */
+      border: 1px solid #a5c3dd; /* Border for submenu */
+    }
+    
+    .header_black .has-submenu .submenu-inline li a {
+      color: #000000; /* Text color for submenu links in black header */
+    }
+    
+    .header_black .has-submenu .submenu-inline li a:hover {
+      color: #57aaf3; /* Consistent hover color for submenu links */
+    }
+    
+    
+    
+/* footer section */
+.footer_black {
+blackborder: 1px solid #a5c3dd;
+    padding-top: 67px;
+  }
+  
+  .footer_top {
+    padding-bottom: 61px;
+  }
+  .footer_black .widgets_container > h3 {
+    color: black;
+    font-family: serif;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 26px;
+    text-transform: capitalize;
+    margin-bottom: 24px;
+  }
+  
+  .footer_contact p {
+    margin-bottom: 0;
+    line-height: 30px;
+    color: #a0a0a0;
+  }
+  
+  .footer_contact p a:hover {
+    color: #57aaf3;
+  }
+  
+  .footer_contact ul {
+    margin-top: 10px;
+  }
+  .footer_contact ul li {
+    display: inline-block;
+    margin-right: 7px;
+  }
+  
+  .footer_contact ul li:last-child {
+    margin-right: 0;
+  }
+  .footer_contact ul li a {
+    color: black;
+    font-size: 18px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border: 0;
+    background: #b6d7f4;
+    text-align: center;
+    border-radius: 50%;
+    display: block;
+  }
+  
+  .footer_contact ul li a:hover {
+    background: #57aaf3;
+  }
+  
+  .footer_menu ul li a {
+    display: block;
+    font-weight: 400;
+    line-height: 30px;
+    font-size: 14px;
+    color: #a0a0a0;
+  }
+  
+  .footer_menu ul li a:hover {
+    color: #57aaf3;
+  }
+  
+  /* ***************** */
+  .simple_product_items {
+    display: flex;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid 2d2d2d;
+  }
+  
+  .simple_product_items:last-child {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-bottom: 0;
+  }
+  
+  .simple_product_thumb {
+    width: 22%;
+  }
+  
+  .simple_product_content {
+    width: 70%;
+    margin-left: 17px;
+  }
+  
+  .simple_product_content .tag_cate {
+    margin-bottom: 0;
+  }
+  .simple_product_content .product_name h3 {
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 10px;
+  }
+  
+  .simple_product_content .product_name h3 a {
+    color: black;
+    font-size: 23px;
+  }
+  
+  .simple_product_content .product_name h3 a:hover {
+    color: #57aaf3;
+  }
+  
+  .simple_product_content .product_price span {
+    color: #5a5a5a;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  
+  .simple_product_content .product_price span.old_price {
+    text-decoration: line-through;
+    padding-right: 8px;
+  }
+  
+  .simple_product_content .product_price span.current_price {
+    color: #57aaf3;
+    font-weight: 500;
+  }
+  
+  /* *********footer bottom ******* */
+  .footer_bottom {
+    padding: 38px 0 46px;
+  }
+  
+  .copyright_area {
+    text-align: center;
+  }
+  .copyright_area p {
+    text-transform: capitalize;
+    line-height: 26px;
+    color: #a0a0a0;
+  }
+  
+  .copyright_area p a {
+    color: #57aaf3;
+  }
+  .copyright_area p a:hover {
+    text-decoration: underline;
+  }
+
+
+
+
+
+    /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background-color: aliceblue;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 1200px;
+        }
+        /* Header */
+        .header {
+            background-color: aliceblue; /* Example: Light goldenrod background color */
+            color: #343a40; /* Adjust the text color if needed */
+            padding: 20px; /* Ensure padding is applied */
+            text-align: center; /* Center align text */
+        }
+
+        
+
+        .search-bar {
+            margin-top: 20px;
+            display: flex; /* Ensure the input and button are on the same line */
+            justify-content: center; /* Center align the search bar */
+            align-items: center; /* Center align vertically */
+        }
+
+        .search-bar input {
+            width: 80%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px 0 0 4px;
+            box-sizing: border-box; /* Ensure padding is included in width */
+        }
+
+        .search-bar button {
+            padding: 8px;
+            background-color: aliceblue;
+            color: #343a40; /* Dark text color for the button */
+            cursor: pointer;
+            display: flex; /* Ensure the icon is centered */
+            justify-content: center;
+            align-items: center;
+        }
+
+        .search-bar button img.search-icon {
+            width: 25px; /* Adjust the size as needed */
+            height: 25px; /* Adjust the size as needed */
+        }
+
+        /* Featured Slider */
+.featured-slider {
+    margin-top: 30px;
+    padding: 0;
+}
+
+.featured-slider .slick-slider {
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.featured-slider .slick-slider div {
+    margin: 0;
+    padding: 0;
+}
+
+.featured-slider .img-fluid {
+    width: 100%;
+    height: auto;
+}
+
+.featured-slider .slide-caption {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: aliceblue;
+    padding: 0px;
+    border-radius: 5px;
+    margin: 0;
+}
+
+.featured-slider h2 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.featured-slider p {
+    font-size: 16px;
+    margin: 0;
+}
+ /* Blog Categories */
+        .blog-categories .category img {
+            max-width: 100%;
+            height: auto;
+        }
+        .blog-categories{
+            background-color: aliceblue;
+        }
+        .blog-categories .category h3 {
+            margin-top: 15px;
+            font-size: 20px;
+        }
+        
+        .blog-categories .category p {
+            margin: 15px 0;
+        }
+        
+        .blog-categories .btn-info {
+            background-color: #b6d7f4;
+            border-color: #b6d7f4;
+            color: #000000;
+        }
+        .blog-categories .btn-info:hover {
+            background-color: #57aaf3;
+            
+        }
+        
+        .blog-categories .btn-info i {
+            margin-right: 5px;
+        }
+
+        /* Slider Container */
+.category-slider {
+    position: relative;
+    background-color: aliceblue;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px; /* Add spacing between slider and text */
+}
+
+.category-slider .slick-slide img {
+    border-radius: 10px;
+    transition: transform 0.5s ease;
+}
+
+.category-slider .slick-slide img:hover {
+    transform: scale(1.05);
+}
+
+/* Slick Slider Styles */
+.slick-slider {
+    position: relative;
+}
+
+        
+ 
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .blog-categories {
+        padding: 15px;
+    }
+
+    .blog-categories .category img {
+        max-width: 80%;
+        height: auto;
+        display: block;
+        margin: 0 auto; /* Center the images */
+    }
+
+    .blog-categories .category h3 {
+        font-size: 18px;
+    }
+
+    .blog-categories .category p {
+        font-size: 0.9em;
+    }
+
+    .category-slider .slick-slide img {
+        max-width: 80%;
+        height: auto;
+        display: block;
+        margin: 0 auto; /* Center the images */
+    }
+}
+
+@media (max-width: 480px) {
+    .blog-categories {
+        padding: 10px;
+    }
+
+    .blog-categories .category img {
+        max-width: 60%;
+        height: auto;
+        display: block;
+        margin: 0 auto; /* Center the images */
+    }
+
+    .blog-categories .category h3 {
+        font-size: 16px;
+    }
+
+    .blog-categories .category p {
+        font-size: 0.85em;
+    }
+
+    .category-slider .slick-slide img {
+        max-width: 60%;
+        height: auto;
+        display: block;
+        margin: 0 auto; /* Center the images */
+    }
+}
+
+
+/* Latest Posts */
+.latest-posts {
+    padding: 20px;
+    background-color: aliceblue;
+}
+
+.latest-posts h2 {
+    margin-bottom: 30px;
+}
+
+.latest-posts .row {
+    margin-bottom: 40px;
+}
+
+/* Collage Styling */
+.collage {
+    background-color: aliceblue;
+    display: grid;
+    grid-template-areas: 
+        "img1 img2 img2"
+        "img3 img2 img2"
+        "img4 img5 img6";
+    gap: 5px;
+    width: 100%;
+    height: 100%;
+}
+
+.collage-item {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Adjusted transition duration */
+}
+
+.collage-item-large {
+    grid-area: img2;
+}
+
+.collage-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Adjusted transition duration */
+}
+
+/* Grid area assignments */
+.collage .collage-item:nth-child(1) {
+    grid-area: img1;
+}
+
+.collage .collage-item:nth-child(2) {
+    grid-area: img2;
+}
+
+.collage .collage-item:nth-child(3) {
+    grid-area: img3;
+}
+
+.collage .collage-item:nth-child(4) {
+    grid-area: img4;
+}
+
+.collage .collage-item:nth-child(5) {
+    grid-area: img5;
+}
+
+.collage .collage-item:nth-child(6) {
+    grid-area: img6;
+}
+
+/* Hover Effects for Individual Images */
+.collage-item:hover img {
+    transform: scale(1.1); /* Slightly increase the image size */
+    opacity: 0.8; /* Reduce opacity for a subtle effect */
+}
+
+/* Adjust sizes and positions of images */
+.img-1, .img-2, .img-3, .img-4, .img-5, .img-6 {
+    position: absolute;
+}
+
+.img-1 {
+    top: 0;
+    left: 0;
+    width: 33.33%;
+    height: 50%;
+}
+
+.img-2 {
+    top: 0;
+    left: 33.33%;
+    width: 33.33%;
+    height: 100%; /* Larger image */
+}
+
+.img-3 {
+    top: 0;
+    left: 66.66%;
+    width: 33.33%;
+    height: 50%;
+}
+
+.img-4 {
+    top: 50%;
+    left: 0;
+    width: 33.33%;
+    height: 50%;
+}
+
+.img-5 {
+    top: 50%;
+    left: 33.33%;
+    width: 33.33%;
+    height: 50%;
+}
+
+.img-6 {
+    top: 50%;
+    left: 66.66%;
+    width: 33.33%;
+    height: 50%;
+}
+
+/* Hover Effect */
+.collage-img:hover {
+    opacity: 0.3;
+}
+
+.collage-img:hover.img-1,
+.collage-img:hover.img-2,
+.collage-img:hover.img-3,
+.collage-img:hover.img-4,
+.collage-img:hover.img-5,
+.collage-img:hover.img-6 {
+    opacity: 1;
+}
+
+.card-body {
+    padding: 15px;
+    background-color: aliceblue;
+    border-top: 1px solid #ddd;
+    position: relative;
+}
+
+.card-title {
+    margin-bottom: 10px;
+    font-size: 1.25rem;
+}
+
+.card-text {
+    margin-bottom: 15px;
+}
+
+.btn-info {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #57aaf3;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-info:hover {
+    background-color: #57aaf3;
+}
+
+.icon-arrow-right {
+    margin-right: 5px;
+    /* Add any icon-specific styles here */
+}
+
+/* Custom styles for text over collage */
+.post-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+    padding: 10px; /* Added padding for better readability on smaller screens */
+}
+
+.post-content h3 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.post-content p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.post-content .btn-info {
+    background-color: #57aaf3;
+    border-color: #57aaf3;
+}
+
+/* Margin adjustments */
+.section-1 .collage {
+    margin-left: 0px;
+}
+
+.section-2 .collage {
+    margin-right: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .post-content h3 {
+        font-size: 1.5rem;
+    }
+
+    .post-content p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .post-content h3 {
+        font-size: 1.2rem;
+    }
+
+    .post-content p {
+        font-size: 0.85rem;
+    }
+
+}
+
+/* Responsive Design */
+@media (max-width: 767px) {
+    .collage-img {
+        width: 30%; /* Adjust for mobile view */
+        height: 30%;
+    }
+}
+
+        
+        /* Customer Stories */
+        .customer-stories  {
+            background-color: aliceblue;
+        }
+        .customer-stories h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            margin-top: 30px;
+        }
+        
+        .customer-stories .testimonial {
+            margin-bottom: 20px;
+            margin-left: 70px;
+            margin-right: 70px;
+        }
+        
+        .customer-stories .testimonial img {
+            max-width: 100px;
+            height: auto;
+        }
+        
+        .customer-stories blockquote {
+            border-left: 4px solid #57aaf3;
+            padding-left: 35px;
+            margin: 0px;
+            font-style: italic;
+        }
+        
+        .customer-stories footer {
+            font-size: 14px;
+            color: #666;
+        }
+        
+      
+/* Responsive Design */
+@media (max-width: 768px) {
+    .customer-stories h2 {
+        font-size: 28px;
+    }
+
+    .customer-stories .testimonial {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    .customer-stories blockquote {
+        padding-left: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .customer-stories h2 {
+        font-size: 24px;
+        margin-top: 20px;
+        margin-bottom: 15px;
+    }
+
+    .customer-stories .testimonial {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .customer-stories blockquote {
+        padding-left: 15px;
+        font-size: 14px;
+    }
+
+    .customer-stories footer {
+        font-size: 12px;
+    }
+}
+
+/* Occasion and Gift Guides */
+.occasion-guides {
+    padding: 30px;
+    background-color: aliceblue;
+}
+
+.nav-tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.nav-tabs .nav-link {
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin: 0 10px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    color: #333;
+    background: #f8f9fa;
+}
+
+.nav-tabs .nav-link.active {
+    background: #57aaf3; /* Active tab background color */
+    color: white;
+    border: 2px solid #57aaf3; /* Active tab border color */
+}
+
+.nav-tabs .nav-link:hover {
+    background: #e0f7fa; /* Hover background color */
+    color: #17a2b8;
+    border: 2px solid #17a2b8; /* Hover border color */
+}
+
+.tab-content {
+    text-align: center;
+}
+
+.tab-content .tab-pane {
+    position: relative;
+}
+
+.image-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.image-row img {
+    max-width: 250px; /* Adjusted size */
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 20px;
+}
+
+.image-row img:hover {
+    transform: scale(1.05); /* Zoom effect on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
+}
+
+.tab-text {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-tabs .nav-link {
+        font-size: 14px;
+        padding: 8px 15px;
+        margin: 5px;
+    }
+
+    .image-row img {
+        max-width: 200px; /* Reduce image size on smaller screens */
+    }
+
+    .tab-text {
+        font-size: 0.9rem;
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-tabs .nav-link {
+        font-size: 12px;
+        padding: 6px 10px;
+        margin: 3px;
+    }
+
+    .image-row img {
+        max-width: 150px; /* Further reduce image size on very small screens */
+    }
+
+    .tab-text {
+        font-size: 0.8rem;
+        margin-bottom: 10px;
+    }
+}
+
+/**banner*/
+/* Base Styles for the Banner Section */
+.banner-section {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background: url('images/Picsart_24-08-01_01-46-54-124.jpg') no-repeat center center/cover;
+    margin-bottom: 50px;
+}
+
+.banner-content {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    color: black; /* Text color set to black */
+    text-shadow: none; /* Remove text shadow */
+    text-align: right;
+    max-width: 300px;
+    background: rgba(255, 255, 255, 0.8); /* Optional: white background with slight transparency */
+    padding: 20px;
+    border-radius: 8px; /* Optional: rounded corners */
+}
+
+.banner-content h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.banner-content p {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+    .banner-section {
+        height: auto; /* Allow height to adjust based on content */
+        min-height: 300px; /* Ensure a minimum height */
+    }
+
+    .banner-content {
+        position: static; /* Make the content follow the normal document flow */
+        margin: 10px auto; /* Center the content */
+        max-width: 90%; /* Adjust width to fit within the screen */
+        text-align: center; /* Center-align the text */
+    }
+
+    .banner-content h2 {
+        font-size: 28px; /* Slightly smaller heading font size */
+    }
+
+    .banner-content p {
+        font-size: 16px; /* Slightly smaller paragraph font size */
+    }
+}
+
+body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }/* Video Guides Section Styles */
+.video-guides-section {
+    padding: 40px;
+    text-align: center;
+    background-color: aliceblue;
+}
+
+.video-guides-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Video Grid Styles */
+.video-grid {
+    display: flex;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent wrapping */
+    padding: 10px 0; /* Optional: padding for spacing */
+    justify-content: center; /* Center-align the cards horizontally */
+}
+
+/* Video Card Styles */
+.video-card {
+    display: inline-block; /* Ensure cards are inline for horizontal scrolling */
+    width: 300px; /* Set a fixed width for the cards */
+    margin: 0 10px; /* Space between cards, adjusted for better centering */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.video-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.video-card iframe {
+    width: 100%;
+    height: 200px;
+    border: none;
+}
+
+.video-content {
+    padding: 20px;
+    text-align: left;
+}
+
+.video-content h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #000;
+    font-style: italic;
+}
+
+.video-content p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.watch-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #b6d7f4; /* Change to your preferred color */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.watch-button:hover {
+    background-color: #57aaf3; /* Adjust hover color if needed */
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+    .video-grid {
+        flex-direction: row; /* Ensure cards are in a row */
+        overflow-x: auto; /* Enable horizontal scrolling */
+        scroll-snap-type: x mandatory; /* Optional: smooth snapping */
+    }
+
+    .video-card {
+        width: 300px; /* Fixed width for cards */
+        flex-shrink: 0; /* Prevent cards from shrinking */
+        scroll-snap-align: start; /* Optional: smooth snapping */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .video-card {
+        width: 250px; /* Adjust width for very small screens */
+        margin: 0 8px; /* Adjust spacing for very small screens */
+    }
+
+    .video-content h3 {
+        font-size: 18px; /* Smaller heading size for mobile */
+    }
+
+    .video-content p {
+        font-size: 14px; /* Smaller paragraph size for mobile */
+    }
+
+    .watch-button {
+        font-size: 14px; /* Smaller button text size for mobile */
+        padding: 8px 16px; /* Adjust button padding for mobile */
+    }
+}
+
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+    .video-grid {
+        flex-direction: row; /* Ensure cards are in a row */
+        overflow-x: auto; /* Enable horizontal scrolling */
+        scroll-snap-type: x mandatory; /* Optional: smooth snapping */
+    }
+
+    .video-card {
+        width: 300px; /* Fixed width for cards */
+        flex-shrink: 0; /* Prevent cards from shrinking */
+        scroll-snap-align: start; /* Optional: smooth snapping */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .video-card {
+        width: 250px; /* Adjust width for very small screens */
+        margin-right: 10px; /* Space between cards */
+    }
+
+    .video-content h3 {
+        font-size: 18px; /* Smaller heading size for mobile */
+    }
+
+    .video-content p {
+        font-size: 14px; /* Smaller paragraph size for mobile */
+    }
+
+    .watch-button {
+        font-size: 14px; /* Smaller button text size for mobile */
+        padding: 8px 16px; /* Adjust button padding for mobile */
+    }
+}
+
+
+/*sustainability*/.sustainability-ethics-section {
+    padding: 50px 20px;
+    background-color: #e9f5f8; /* Fallback color if image doesn't load */
+    background-image: url(images/carousal.jpg); /* Replace with your background image URL */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white; /* Ensure text is visible on background */
+}
+
+.feature-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-box {
+    background-color: #17a2b8; /* Semi-transparent background for better readability */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 250px;
+}
+
+.feature-box h3 {
+    font-size: 20px;
+    margin-top: 0;
+}
+
+.feature-box p {
+    font-size: 14px;
+    margin: 10px 0 0;
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+    .feature-box {
+        min-width: 100%; /* Ensure feature boxes take full width */
+        box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    }
+
+    .feature-box h3 {
+        font-size: 18px; /* Adjust font size for headings */
+    }
+
+    .feature-box p {
+        font-size: 12px; /* Adjust font size for paragraphs */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .feature-box {
+        padding: 15px; /* Reduce padding for smaller screens */
+    }
+
+    .feature-box h3 {
+        font-size: 16px; /* Further reduce font size for headings */
+    }
+
+    .feature-box p {
+        font-size: 10px; /* Further reduce font size for paragraphs */
+    }
+}
+/* Sidebar Styling */
+/* Sidebar Styling */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    background-color: AliceBlue; /* Updated background color */
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #111; /* Changed to dark color for visibility */
+    display: block;
+    transition: 0.3s;
+    font-weight: lighter;
+}
+
+.sidebar a:hover {
+    color: #000000;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.dropdown-btn {
+    font-size: 25px;
+    border: none;
+    background: none;
+    color: #111; /* Changed to dark color for visibility */
+    padding: 8px 8px 8px 32px;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+}
+
+.dropdown-container {
+    display: none;
+    background-color: #f9f9f9;
+    padding-left: 8px;
+}
+
+.dropdown-container a {
+    font-size: 20px;
+}
+
+/* Toggle Button for Mobile View */
+.toggle-btn {
+    font-size: 30px;
+    cursor: pointer;
+    color: #000;
+    display: none; /* Hidden by default */
+}
+
+/* Show the toggle button and hide the main menu on mobile */
+@media screen and (max-width: 768px) {
+    .toggle-btn {
+        display: block; /* Show only on mobile */
+    }
+
+    .main_menu_inner {
+        display: none; /* Hide the main menu on mobile */
+    }
+}
+
+/* Adjustments for small screens */
+@media screen and (max-height: 450px) {
+    .sidebar {
+        padding-top: 15px;
+    }
+
+    .sidebar a {
+        font-size: 1px;
+    }
+}
+
+    
+</style>
+</head>
+
+<body>
+
+  <div class="home_black_version">
+    <header class="header_area header_black">
+        <!-- header top starts -->
+        <div class="header_top">
+            <div class="container">
+                <div class="row align-items-center">
+
+                    <div class="col-lg-6 col-md-6">
+                        <h1 style="font-size: 27px; color: #57aaf3;">Ambica</h1>
+                    </div>
+                    
+                    <div class="col-lg-6 col-md-6">
+                        <div class="top_right text-right">
+                            <ul>
+                                <!-- <li class="language">
+                                    <a href="#">English <i class="ion-chevron-down"></i></a>
+                                    <ul class="dropdown_language">
+                                        <li><a href="#">French</a></li>
+                                        <li><a href="#">Germany</a></li>
+                                        <li><a href="#">Hindi</a></li>
+                                    </ul>
+                                </li> --> 
+                                <!-- <li class="currency">
+                                    <a href="#">INR <i class="ion-chevron-down"></i></a>
+                                    <ul class="dropdown_currency">
+                                        <li><a href="#">USD - Dollar</a></li>
+                                        <li><a href="#">EUR - Euro</a></li>
+                                        <li><a href="#">GBP - British Pound</a></li>
+                                    </ul>
+                                </li> -->
+                                <li class="top_links">
+                                    <a href="#" style="font-size: large;">My Account <i class="ion-chevron-down"></i></a>
+                                    <ul class="dropdown_links">
+                                        <li><a href="login popup.html">Login</a></li>
+                                        <li><a href="acc.html">Account dashboard</a></li>
+                                        <li><a href="edit.html">Shopping Cart</a></li>
+                                        <li><a href="wishlist.html">Wishlist</a></li>
+                                        <li><a href="#">Logout</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- header top ends -->
+
+        <!-- header middle starts -->
+        <!--<div class="header_middel">
+            <div class="container">
+                <div class="row align-items-center">
+
+                    <div class="col-lg-5">
+                        <div class="home_contact">
+                            <div class="contact_icone">
+                                <img src="images/icon/icon_phone.png" alt="">
+                            </div>
+                            <div class="contact_box">
+                                <p>Inquiry / Helpline : <a href="tel: 1234567894">1234567894</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2 col-md-3 col-4">
+                        <div class="logo">
+                            <a href="index.html"><img src="#" alt=""></a>
+                            <h2 style="    font-size: 27px; color: #57aaf3;">Ambica </h2>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-5 col-md-7 col-6">
+                        <div class="middel_right">
+                            <div class="search_btn">
+                                <a href="#"><i class="ion-ios-search-strong"></i></a>
+                                <div class="dropdown_search">
+                                    <form action="#">
+                                        <input type="text" placeholder="Search Product ....">
+                                        <button type="submit"><i class="ion-ios-search-strong"></i></button>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="wishlist_btn">
+                                <a href="#"><i class="ion-heart"></i></a>
+                            </div>
+                            <div class="cart_link">
+                                <a href="#"><i class="ion-android-cart"></i><span class="cart_text_quantity">Rs.
+                                        67,598</span><i class="ion-chevron-down"></i></a>
+                                <span class="cart_quantity">2</span>
+
+                                
+                                <div class="mini_cart">
+                                    <div class="cart_close">
+                                        <div class="cart_text">
+                                            <h3>cart</h3>
+                                        </div>
+                                        <div class="mini_cart_close">
+                                            <a href="javascript:void(0)"><i class="ion-android-close"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="cart_item">
+                                        <div class="cart_img">
+                                            <a href="#"><img src="images/nav-product/product.jpg" alt=""></a>
+                                        </div>
+                                        <div class="cart_info">
+                                            <a href="#">Earings</a>
+                                            <span class="quantity">Qty : 1</span>
+                                            <span class="price_cart">Rs. 54,599</span>
+                                        </div>
+                                        <div class="cart_remove">
+                                            <a href="#"><i class="ion-android-close"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="cart_item">
+                                        <div class="cart_img">
+                                            <a href="#"><img src="images/nav-product/product2.jpg" alt=""></a>
+                                        </div>
+                                        <div class="cart_info">
+                                            <a href="#">Bracelet</a>
+                                            <span class="quantity">Qty : 1</span>
+                                            <span class="price_cart">Rs. 12,999</span>
+                                        </div>
+                                        <div class="cart_remove">
+                                            <a href="#"><i class="ion-android-close"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="cart_total">
+                                        <span>Subtotal : </span>
+                                        <span>Rs. 67,598</span>
+                                    </div>
+                                    <div class="mini_cart_footer">
+                                        <div class="cart_button view_cart">
+                                            <a href="#">View Cart</a>
+                                        </div>
+                                        <div class="cart_button checkout">
+                                            <a href="#" class="active">Checkout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        <!-- header middle ends -->
+
+        <!-- header bottom starts -->
+<div class="header_bottom sticky-header">
+  <div class="container">
+      <div class="row align-items-center">
+          <div class="col-6 col-md-6 col-6">
+              <!-- Toggle Button for Mobile -->
+              <span class="toggle-btn" onclick="openNav()">&#9776; </span>
+              
+              <!-- Main Menu (Desktop Only) -->
+              <div class="main_menu_inner">
+                  <div class="main_menu">
+                      <nav>
+                          <ul>
+                              <li class="active">
+                                  <a href="index.html">Home <i class="ion-chevron-down"></i></a>
+                                  <ul class="sub_menu">
+                                      <li><a href="#">Banner</a></li>
+                                      <li><a href="#">Featured</a></li>
+                                      <li><a href="#">Collection</a></li>
+                                      <li><a href="#">Best Selling</a></li>
+                                      <li><a href="#">News</a></li>
+                                  </ul>
+                              </li>
+                              <li>
+                                  <a href="category.html">Category <i class="ion-chevron-down"></i></a>
+                                  <ul class="mega_menu">
+                                      <li>
+                                          <a href="women.html">Women</a>
+                                          <ul>
+                                              <li><a href="earing.html">Earring</a></li>
+                                              <li><a href="pendant&necklace.html">Pendant&Necklace</a></li>
+                                              <li><a href="rings.html">Rings</a></li>
+                                              <li><a href="anklets.html">Anklets</a></li>
+                                              <li><a href="braclet.html">Bracelets</a></li>
+                                              <li class="has-submenu">
+                                                  <a href="#">Other Category</a>
+                                                  <ul class="submenu-inline">
+                                                      <li><a href="jewelleryset.html">Jewellry Set</a></li>
+                                                      <li><a href="chains&mangalsutra.html">Chains & Mangalsutra</a></li>
+                                                      <li><a href="nosepins.html">Nose pins & Rings</a></li>
+                                                      <li><a href="toerings.html">Toe rings</a></li>
+                                                      <li><a href="bangals.html">Bangles</a></li>
+                                                  </ul>
+                                              </li>
+                                          </ul>
+                                      </li>
+                                      <li>
+                                          <a href="men.html">Men</a>
+                                          <ul>
+                                              <li><a href="men_ring.html">Ring</a></li>
+                                              <li><a href="men_pendant.html">Pendant&Chains</a></li>
+                                              <li><a href="men_braclet.html">Bracelet</a></li>
+                                              <li><a href="men_earing.html">Earing</a></li>
+                                          </ul>
+                                      </li>
+                                  </ul>
+                              </li>
+                              <li>
+                                  <a href="latestcollection.html">Latest Collections <i class="ion-chevron-down"></i></a>
+                                  <ul class="sub_menu pages">
+                                      <li><a href="wingsofwonder.html">Wings On Wonder</a></li>
+                                      <li><a href="cherryontop.html">Cherry on Pop</a></li>
+                                      <li><a href="loveinparis.html">Love in paris</a></li>
+                                      <li><a href="justarrived.html">Just Arrived</a></li>
+                                  </ul>
+                              </li>
+                              <li><a href="offer.html">Offer</a></li>
+                              <li><a href="about.html">About Us</a></li>
+                          </ul>
+                      </nav>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-6 col-md-6 col-6">
+              <div class="middel_right">
+                  <div class="search_btn">
+                      <a href="#"><i class="ion-ios-search-strong"></i></a>
+                      <div class="dropdown_search">
+                          <form action="#">
+                              <input type="text" placeholder="Search Product ....">
+                              <button type="submit"><i class="ion-ios-search-strong"></i></button>
+                          </form>
+                      </div>
+                  </div>
+                  <div class="wishlist_btn">
+                      <a href="#"><i class="ion-heart"></i></a>
+                  </div>
+                  <div class="cart_link">
+                      <a href="#"><i class="ion-android-cart"></i><span class="cart_text_quantity">Rs.
+                              67,598</span><i class="ion-chevron-down"></i></a>
+                      <span class="cart_quantity">2</span>
+
+                      <!-- mini cart -->
+                      <div class="mini_cart">
+                          <div class="cart_close">
+                              <div class="cart_text">
+                                  <h3>cart</h3>
+                              </div>
+                              <div class="mini_cart_close">
+                                  <a href="javascript:void(0)"><i class="ion-android-close"></i></a>
+                              </div>
+                          </div>
+                          <div class="cart_item">
+                              <div class="cart_img">
+                                  <a href="#"><img src="images/nav-product/product.jpg" alt=""></a>
+                              </div>
+                              <div class="cart_info">
+                                  <a href="#">Earings</a>
+                                  <span class="quantity">Qty : 1</span>
+                                  <span class="price_cart">Rs. 54,599</span>
+                              </div>
+                              <div class="cart_remove">
+                                  <a href="#"><i class="ion-android-close"></i></a>
+                              </div>
+                          </div>
+                          <div class="cart_item">
+                              <div class="cart_img">
+                                  <a href="#"><img src="images/nav-product/product2.jpg" alt=""></a>
+                              </div>
+                              <div class="cart_info">
+                                  <a href="#">Bracelet</a>
+                                  <span class="quantity">Qty : 1</span>
+                                  <span class="price_cart">Rs. 12,999</span>
+                              </div>
+                              <div class="cart_remove">
+                                  <a href="#"><i class="ion-android-close"></i></a>
+                              </div>
+                          </div>
+                          <div class="cart_total">
+                              <span>Subtotal : </span>
+                              <span>Rs. 67,598</span>
+                          </div>
+                          <div class="mini_cart_footer">
+                              <div class="cart_button view_cart">
+                                  <a href="#">View Cart</a>
+                              </div>
+                              <div class="cart_button checkout">
+                                  <a href="#" class="active">Checkout</a>
+                              </div>
+                          </div>
+                      </div>
+                      <!-- mini cart ends  -->
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- header bottom ends -->
+
+<!-- Sidebar Structure -->
+<!-- Sidebar Structure -->
+<div id="sidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="index.html">Home</a>
+
+  <!-- Category Dropdown -->
+  <a href="javascript:void(0)" class="dropdown-btn">Category <i class="ion-chevron-down"></i></a>
+  <div class="dropdown-container">
+    <ul class="mega_menu">
+      <li>
+        <a href="women.html">Women <i class="ion-chevron-down"></i></a>
+        <ul>
+          <li><a href="earing.html">Earring</a></li>
+          <li><a href="pendant&necklace.html">Pendant & Necklace</a></li>
+          <li><a href="rings.html">Rings</a></li>
+          <li><a href="anklets.html">Anklets</a></li>
+          <li><a href="braclet.html">Bracelets</a></li>
+          <li class="has-submenu">
+            <a href="#">Other Category <i class="ion-chevron-down"></i></a>
+            <ul class="submenu-inline">
+              <li><a href="jewelleryset.html">Jewellery Set</a></li>
+              <li><a href="chains&mangalsutra.html">Chains & Mangalsutra</a></li>
+              <li><a href="nosepins.html">Nose Pins & Rings</a></li>
+              <li><a href="toerings.html">Toe Rings</a></li>
+              <li><a href="bangals.html">Bangles</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="men.html">Men <i class="ion-chevron-down"></i></a>
+        <ul>
+          <li><a href="men_ring.html">Ring</a></li>
+          <li><a href="men_pendant.html">Pendant & Chains</a></li>
+          <li><a href="men_braclet.html">Bracelet</a></li>
+          <li><a href="men_earing.html">Earring</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Latest Collections Link with Dropdown -->
+  <a href="javascript:void(0)"  class="dropdown-btn">Latest Collections <i class="ion-chevron-down"></i></a>
+  <div class="dropdown-container">
+    <ul class="sub_menu pages">
+      <li><a href="wingsofwonder.html">Wings On Wonder</a></li>
+      <li><a href="cherryontop.html">Cherry on Top</a></li>
+      <li><a href="loveinparis.html">Love in Paris</a></li>
+      <li><a href="justarrived.html">Just Arrived</a></li>
+    </ul>
+  </div>
+
+  <a href="offer.html">Offer</a>
+  <a href="about.html">About Us</a>
+</div>
+        <!-- header bottom ends -->
+    </header>
+
+
+
+    
+        <!-- Search Bar -->
+        <form class="search-bar mt-3">
+            <input type="text" placeholder="Search..." aria-label="Search">
+            <button type="submit" class="btn btn-light">
+                <img src="icons/search.icon.png" alt="Search Icon" class="search-icon"> <!-- Replace with your search icon -->
+            </button>
+        </form>
+    </header>
+    
+    
+    
+        <!-- Featured Blog Slider -->
+<section class="featured-slider mb-5">
+    <div class="slick-slider">
+        <div>
+            <img src="images/slider2.jpg" alt="Featured Post 1" class="img-fluid">
+            <div class="slide-caption">
+                <h2>Latest Jewelry Trends of 2024</h2>
+                <p>Discover the hottest jewelry trends this year.</p>
+            </div>
+        </div>
+        <div>
+            <img src="images/slider3.jpg" alt="Featured Post 2" class="img-fluid">
+            <div class="slide-caption">
+                <h2>How to Care for Your Diamonds</h2>
+                <p>Keep your diamonds sparkling with these tips.</p>
+            </div>
+        </div>
+        <div>
+            <img src="images/slider5.jpg" alt="Featured Post 3" class="img-fluid">
+            <div class="slide-caption">
+                <h2>The Art of Jewelry Making</h2>
+                <p>Go behind the scenes with our artisans.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<main class="container mt-5">
+       <!-- Blog Categories -->
+<section class="blog-categories row mb-5">
+    <div class="category col-md-4 text-center">
+        <h3>Jewelry Trends</h3>
+        <!-- Slider for Jewelry Trends Images -->
+        <div class="category-slider" id="trends-slider">
+            <div>
+                <img src="images/JewelryTrend.jpg" alt="Jewelry Trends Image 1" class="img-fluid rounded">
+            </div>
+            <div>
+                <img src="images/JewelryTrend3.jpg" alt="Jewelry Trends Image 2" class="img-fluid rounded">
+            </div>
+        </div>
+        <p>Discover the most recent trends and innovations in the world of jewelry. From emerging styles and materials to the latest design techniques, stay informed about what's in vogue and what’s next in the jewelry industry. Follow our updates to ensure you never miss out on the hottest trends and new collections that can enhance your personal style.</p>
+       
+    </div>
+    <div class="category col-md-4 text-center">
+        <h3>Jewelry Care</h3>
+        <!-- Slider for Jewelry Care Images -->
+        <div class="category-slider" id="care-slider">
+            <div>
+                <img src="images/JewelryCare1.jpg" alt="Jewelry Care Image 1" class="img-fluid rounded">
+            </div>
+            <div>
+                <img src="images/JewelryCare2.jpg" alt="Jewelry Care Image 2" class="img-fluid rounded">
+            </div>
+        </div>
+        <p>Master the art of maintaining and preserving your precious jewelry pieces with our expert tips and DIY care techniques. Learn the best practices for cleaning, storing, and protecting your cherished items to keep them looking as stunning as the day you bought them. Our comprehensive guides will help you handle your jewelry with care, ensuring its longevity and sparkle.</p>
+        
+    </div>
+    <div class="category col-md-4 text-center">
+        <h3>Behind the Scenes</h3>
+        <!-- Slider for Behind the Scenes Images -->
+        <div class="category-slider" id="behind-slider">
+            <div>
+                <img src="images/JewelryProcess1.jpg" alt="Behind the Scenes Image 1" class="img-fluid rounded">
+            </div>
+            <div>
+                <img src="images/JewelryProcess2.jpg" alt="Behind the Scenes Image 2" class="img-fluid rounded">
+            </div>
+        </div>
+        <p>Take an exclusive behind-the-scenes look at our intricate design and manufacturing process. From the initial concept and sketching stages to the meticulous crafting and finishing touches, explore how our talented artisans bring each piece of jewelry to life. See the dedication and skill that go into every design and understand the craftsmanship that makes each piece uniquely exquisite.</p>
+       
+    </div>
+</section>
+
+        <!-- Latest Blog Posts -->
+<section class="latest-posts">
+    <h2 class="text-center mb-4">Latest Posts</h2>
+    
+    <!-- Section 1: Choosing the Perfect Engagement Ring -->
+    <div class="row mb-5 align-items-center">
+        <div class="col-md-6">
+            <!-- Collage 1 -->
+            <div class="collage">
+                <div class="collage-item"><img src="images/ring1.jpg" alt="Image 1"></div>
+                <div class="collage-item collage-item-large"><img src="images/ring3.jpg" alt="Image 2"></div>
+                <div class="collage-item"><img src="images/ring7.jpg" alt="Image 3"></div>
+                <div class="collage-item"><img src="images/ring5.jpg" alt="Image 4"></div>
+                <div class="collage-item"><img src="images/ring6.jpg" alt="Image 5"></div>
+                <div class="collage-item"><img src="images/ring4.jpg" alt="Image 6"></div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <h3 class="post-title">Choosing the Perfect Engagement Ring</h3>
+            <p class="post-text">
+                <em>Finding the perfect engagement ring involves both emotion and practicality. It’s not just about choosing a beautiful piece of jewelry but one that reflects your partner’s personality and style. Consider the 4 Cs—cut, color, clarity, and carat weight—and how they match your partner’s preferences. Also, think about the setting, metal type, and any personal touches that will make the ring unique. Take your time to choose wisely, as this ring will symbolize your commitment and love for years to come.</em>
+            </p>
+        </div>
+        
+    <!-- Section 2: Top 5 Jewelry Pieces for Summer -->
+    <div class="row align-items-center">
+        <div class="col-md-6 order-md-2">
+            <!-- Collage 2 -->
+            <div class="collage">
+                <div class="collage-item"><img src="images/pendant.jpg" alt="Image 1"></div>
+                <div class="collage-item collage-item-large"><img src="images/set1.jpg" alt="Image 2"></div>
+                <div class="collage-item"><img src="images/earring2.jpg" alt="Image 3"></div>
+                <div class="collage-item"><img src="images/ring8.jpg" alt="Image 4"></div>
+                <div class="collage-item"><img src="images/bracelet3.jpg" alt="Image 5"></div>
+                <div class="collage-item"><img src="images/earings2.jpg" alt="Image 6"></div>
+            </div>
+        </div>
+        <div class="col-md-6 order-md-1">
+            <h3 class="post-title">Top 5 Jewelry Pieces for Summer</h3>
+            <p class="post-text">
+                <em>Summer is the perfect time to showcase vibrant and stylish jewelry pieces. This season, focus on accessories that complement the warm weather and your summer wardrobe. Consider lightweight, colorful pieces like statement earrings, delicate layered necklaces, or bold bangles. These accessories can add a touch of elegance and playfulness to any summer outfit. Whether you're attending a beach party or a casual brunch, the right jewelry can make a significant impact, helping you to shine and express your personal style.</em>
+            </p>
+        </div>
+        
+</section>
+</main>
+ <!--banner section -->
+ <div class="banner-section">
+    <div class="banner-content">
+        <h2>Happiness After Shopping</h2>
+        <p>There's an unparalleled joy that comes with finding the perfect piece of jewelry. Flaunting your new treasure, feeling its elegance, and knowing it reflects your unique style and personality brings an unmatched sense of pride and satisfaction. Embrace the happiness that comes from shopping and flaunting your exquisite new finds!</p>
+    </div>
+</div>  
+
+<main>
+  <!-- Occasion and Gift Ideas -->
+<section class="occasion-guides">
+  <h2 class="text-center mb-4">Occasion and Gift Guides</h2>
+  <ul class="nav nav-tabs" id="occasionTabs" role="tablist">
+      <li class="nav-item">
+          <a class="nav-link active" id="anniversaries-tab" data-bs-toggle="tab" href="#anniversaries" role="tab">Anniversaries</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" id="birthdays-tab" data-bs-toggle="tab" href="#birthdays" role="tab">Birthdays</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" id="holidays-tab" data-bs-toggle="tab" href="#holidays" role="tab">Holidays</a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div class="tab-pane fade show active" id="anniversaries" role="tabpanel">
+          <div class="image-row">
+              <img src="images/anniversary1.jpg" alt="Anniversary Jewelry 1" class="img-fluid">
+              <img src="images/anniversary2.jpg" alt="Anniversary Jewelry 2" class="img-fluid">
+              <img src="images/anniversary3.jpg" alt="Anniversary Jewelry 3" class="img-fluid">
+              <img src="images/anniversary4.jpg" alt="Anniversary Jewelry 4" class="img-fluid">
+          </div>
+          <p class="tab-text">Celebrate your milestones with exquisite jewelry. Our anniversary collection features timeless pieces that signify your everlasting love. Explore a range of elegant options that will make each anniversary special.</p>
+          
+      </div>
+      <div class="tab-pane fade" id="birthdays" role="tabpanel">
+          <div class="image-row">
+              <img src="images/birthday2.jpg" alt="Birthday Jewelry 1" class="img-fluid">
+              <img src="images/birthday5.jpg" alt="Birthday Jewelry 2" class="img-fluid">
+              <img src="images/birthday3.jpg" alt="Birthday Jewelry 3" class="img-fluid">
+              <img src="images/birthday4.jpg" alt="Birthday Jewelry 4" class="img-fluid">
+          </div>
+          <p class="tab-text">Surprise your loved ones with a memorable gift. From dazzling necklaces to sparkling earrings, our birthday jewelry selection is designed to bring joy and celebrate special moments. Find the perfect gift for your loved ones today.</p>
+        
+      </div>
+      <div class="tab-pane fade" id="holidays" role="tabpanel">
+          <div class="image-row">
+              <img src="images/holiday1.jpg" alt="Holiday Jewelry 1" class="img-fluid">
+              <img src="images/holidat2.jpg" alt="Holiday Jewelry 2" class="img-fluid">
+              <img src="images/holiday3.jpg" alt="Holiday Jewelry 3" class="img-fluid">
+              <img src="images/holiday4.jpg" alt="Holiday Jewelry 4" class="img-fluid">
+          </div>
+          <p class="tab-text">Make the holidays sparkle with our selection of festive jewelry gifts. Discover pieces that add a touch of elegance and joy to the holiday season. Shop now and find the perfect gift for everyone on your list.</p>
+          
+      </div>
+  </div>
+</section>
+
+  
+        <!-- Customer Stories and Testimonials -->
+        <section class="customer-stories mb-5">
+            <h2 class="text-center mb-4">Customer Stories</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="testimonial">
+                        <img src="images/customer1.jpg" alt="Customer 1" class="img-fluid rounded-circle">
+                        <blockquote>
+                            <p>"I absolutely love my new necklace! The craftsmanship is incredible and the customer service was exceptional."</p>
+                            <footer>- Jane Doe</footer>
+                        </blockquote>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="testimonial">
+                        <img src="images/customer2.jpg" alt="Customer 2" class="img-fluid rounded-circle">
+                        <blockquote>
+                            <p>"The ring I purchased exceeded my expectations. It’s even more beautiful in person. Thank you for making my special day even more memorable."</p>
+                            <footer>- John Smith</footer>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+      <!-- Video Guides Section -->
+<div class="video-guides-section">
+    <h2>Jewelry Tips and Guides</h2>
+    <div class="video-grid">
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" title="Jewelry Care Tips" allowfullscreen></iframe>
+            <div class="video-content">
+                <h3>Jewelry Care Tips</h3>
+                <button class="watch-button">Watch Now</button>
+            </div>
+        </div>
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" title="Choosing the Right Jewelry" allowfullscreen></iframe>
+            <div class="video-content">
+                <h3>Choosing the Right Jewelry</h3>
+               <button class="watch-button">Watch Now</button>
+            </div>
+        </div>
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/VIDEO_ID_3" title="Jewelry Trends 2024" allowfullscreen></iframe>
+            <div class="video-content">
+                <h3>Jewelry Trends 2024</h3>
+                <button class="watch-button">Watch Now</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--sustainability-->        
+<div class="sustainability-ethics-section">
+    <h2>Sustainability and Ethics</h2>
+    <div class="feature-boxes">
+        <div class="feature-box">
+            <h3>Ethical Sourcing</h3>
+            <p>We ensure all our materials are ethically sourced, promoting fair trade and responsible practices.</p>
+        </div>
+        <div class="feature-box">
+            <h3>Eco-Friendly Materials</h3>
+            <p>Our jewelry is crafted using eco-friendly materials to minimize environmental impact.</p>
+        </div>
+        <div class="feature-box">
+            <h3>Supporting Local Communities</h3>
+            <p>We support local artisans and communities through fair wages and sustainable practices.</p>
+        </div>
+    </div>
+</div>
+
+</main>
+
+  
+
+
+<!-- footer section starts -->
+<footer class="footer_widgets footer_black">
+  <div class="container">
+      <div class="footer_top">
+          <div class="row">
+              <div class="col-lg-4 col-md-6 col-sm-8">
+                  <div class="widgets_container contact_us">
+                      <h3>About Ambica</h3>
+                      <div class="footer_contact">
+                          <p>Address : Shop No 43\3b,<br> Vitthal Mangal Office Below,<br> Somnath Nagar,  Vadgaon Sheri, Pune (411014)</p>
+                          <p>Phone : <a href="tel:(+91)8329566392">(+91)8329566392</a></p>
+                          <p>Email : Ambicajewlers@gmail.com</p>
+                          <ul>
+                              <li><a href="#"><i class="ion-social-facebook"></i></a></li>
+                              <li><a href="#"><i class="ion-social-snapchat"></i></a></li>
+                              <li><a href="#"><i class="ion-social-whatsapp"></i></a></li>
+                              <li><a href="#"><i class="ion-social-instagram"></i></a></li>
+                              <li><a href="#"><i class="ion-social-youtube"></i></a></li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-2 col-md-6 col-sm-4 col-6">
+                  <div class="widgets_container widget_menu">
+                      <h3>Information</h3>
+                      <div class="footer_menu">
+                          <ul>
+                              <li><a href="about.html">About Us</a></li>
+                              <li><a href="blog.html">Blog</a></li>
+                              <li><a href="Contact.html">Contact</a></li>
+                              <li><a href="#">Services</a></li>
+                              <li><a href="category.html">Collection</a></li>
+                              
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-2 col-md-6 col-sm-5 col-6">
+                  <div class="widgets_container widget_menu">
+                      <h3>My Account</h3>
+                      <div class="footer_menu">
+                          <ul>
+                              <li><a href="account.html">My Account</a></li>
+                              <li><a href="Contact.html">Contact</a></li>
+                              <li><a href="wishlist.html">Wishlist</a></li>
+                              
+                              <li><a href="checkout.html">Checkout</a></li>
+                              <li><a href="help.html">Frequently Questions</a></li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-4 col-md-6 col-sm-7">
+                  <div class="widgets_container product_widget">
+                      <h3>Top Rated Products</h3>
+                      <div class="simple_product">
+                          <div class="simple_product_items">
+                              <div class="simple_product_thumb">
+                                  <a href="#"><img src="images/product/14.jpg" alt=""></a>
+                              </div>
+                              <div class="simple_product_content">
+                                  <div class="tag_cate">
+                                      <a href="#">Women,</a>
+                                      <a href="#">Earrings</a>
+                                  </div>
+                                  <div class="product_name">
+                                      <h3><a href="#">Bracelet</a></h3>
+                                  </div>
+                                  <div class="product_price">
+                                      <span class="old_price">Rs. 45612.54</span>
+                                      <span class="current_price">Rs. 41612.54</span>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="simple_product_items">
+                              <div class="simple_product_thumb">
+                                  <a href="#"><img src="images/product/28.jpg" alt=""></a>
+                              </div>
+                              <div class="simple_product_content">
+                                  <div class="tag_cate">
+                                      <a href="#">Women,</a>
+                                      <a href="#">Earrings</a>
+                                  </div>
+                                  <div class="product_name">
+                                      <h3><a href="#">Ring</a></h3>
+                                  </div>
+                                  <div class="product_price">
+                                      <span class="old_price">Rs. 75612.54</span>
+                                      <span class="current_price">Rs. 71612.54</span>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="footer_bottom">
+          <div class="row">
+              <div class="col-12">
+                  <div class="copyright_area">
+                      <p>Copyright &copy; 2020 <a href="#">Ambica</a> All rights Reserved.<br> Designed by <a href="#">Fourise Software Solution Pvt. Ltd.</a></p>
+                      <img src="images/icon/papyel2.png" alt="">
+                  </div>
+              </div>
+          </div>
+      </div>
+
+  </div>
+</footer>
+<!-- footer section ends -->
+</div>
+</div>
+</body>
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Bootstrap JS -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- Bootstrap Bundle with Popper -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+       // Initialize Slick Slider
+$(document).ready(function(){
+    $('.slick-slider').slick({
+        dots: true, // Show dots for navigation
+        infinite: true, // Infinite loop
+        speed: 500, // Speed of transition
+        slidesToShow: 1, // Show one slide at a time
+        slidesToScroll: 1, // Scroll one slide at a time
+        autoplay: true, // Auto-play slides
+        autoplaySpeed: 3000, // Auto-play interval (3 seconds)
+       
+    });
+});
+
+// Handle Search Bar
+document.querySelector('.search-bar button').addEventListener('click', function() {
+    var query = document.querySelector('.search-bar input').value;
+    if (query) {
+        window.location.href = '/search-results.html?query=' + encodeURIComponent(query);
+    }
+});
+
+// Poll Interaction
+document.querySelectorAll('.poll input[type="radio"]').forEach(function(radio) {
+    radio.addEventListener('change', function() {
+        var selectedOption = this.value;
+        console.log('Selected option:', selectedOption);
+        // You can send the selected option to the server or handle it as needed
+    });
+});
+
+// Quiz Interaction
+document.querySelectorAll('.quiz input[type="checkbox"]').forEach(function(checkbox) {
+    checkbox.addEventListener('change', function() {
+        var selectedOptions = Array.from(document.querySelectorAll('.quiz input[type="checkbox"]:checked'))
+            .map(function(checkbox) { return checkbox.value; });
+        console.log('Selected options:', selectedOptions);
+        // You can send the selected options to the server or handle them as needed
+    });
+});
+
+// Social Media Icons Interaction (Example, replace with real functionality)
+document.querySelectorAll('.social-media a').forEach(function(link) {
+    link.addEventListener('click', function() {
+        var platform = this.getAttribute('href');
+        console.log('Clicked social media platform:', platform);
+        // Handle social media interactions if needed
+    });
+});
+$(document).ready(function(){
+    $('#trends-slider').slick({
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        arrows: true
+    });
+
+    $('#care-slider').slick({
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        arrows: true
+    });
+
+    $('#behind-slider').slick({
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        arrows: true
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const cards = document.querySelectorAll('.card');
+
+    cards.forEach(card => {
+        const collageImages = card.querySelectorAll('.collage-img');
+
+        collageImages.forEach(img => {
+            img.addEventListener('mouseover', function() {
+                collageImages.forEach(image => {
+                    if (image !== img) {
+                        image.style.opacity = '0'; // Hide other images
+                    }
+                });
+            });
+
+            img.addEventListener('mouseout', function() {
+                collageImages.forEach(image => {
+                    image.style.opacity = '1'; // Show all images
+                });
+            });
+        });
+    });
+});
+
+
+    function openNav() {
+  document.getElementById("sidebar").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("sidebar").style.width = "0";
+}
+
+// Dropdown toggle functionality
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var dropdownContent = this.nextElementSibling;
+      if (dropdownContent.style.display === "block") {
+          dropdownContent.style.display = "none";
+      } else {
+          dropdownContent.style.display = "block";
+      }
+  });
+}
+
+</script>
+</body>
+</html>

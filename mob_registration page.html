@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ambica Jewellers Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: aliceblue;
+            margin: 0;
+            padding: 20px; /* Added padding to prevent content from touching screen edges */
+        }
+        .registration-container {
+            background-color: #fff;
+            padding: 20px; /* Reduced padding for mobile */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 100%; /* Set to full width */
+            width: 100%; /* Ensure it takes full available width */
+            text-align: center;
+            box-sizing: border-box; /* Ensures padding is included within the width */
+        }
+        .registration-container h2 {
+            margin-bottom: 15px; /* Reduced margin for mobile */
+            color: #333;
+            font-size: 1.5em; /* Adjusted font size for mobile */
+        }
+        .registration-container form {
+            display: flex;
+            flex-direction: column;
+        }
+        .registration-container input[type="email"],
+        .registration-container input[type="password"],
+        .registration-container input[type="text"],
+        .registration-container input[type="tel"],
+        .registration-container input[type="address"] {
+            padding: 10px;
+            margin: 8px 0; /* Reduced margin for mobile */
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em; /* Adjusted font size for mobile */
+        }
+        .registration-container button {
+            padding: 10px;
+            background-color: #57aaf3;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 15px; /* Reduced margin for mobile */
+            font-size: 1em; /* Adjusted font size for mobile */
+        }
+        .registration-container button:hover {
+            background-color: #024dbc;
+        }
+        .registration-container .links {
+            margin-top: 15px; /* Reduced margin for mobile */
+            font-size: 0.9em; /* Adjusted font size for mobile */
+        }
+        .registration-container .links a {
+            color: #57aaf3;
+            text-decoration: none;
+        }
+        .registration-container .links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="registration-container">
+        <h2>Register with Ambica JWELLERS</h2>
+        <form action="mob_registration page.html" method="POST">
+            <input type="email" name="email" placeholder="Enter Email Address" required>
+            <input type="text" name="name" placeholder="Enter Full Name" required>
+            <input type="tel" name="phone" placeholder="Enter Phone Number" required>
+            <input type="text" name="address" placeholder="Enter Address" required>
+            <input type="password" name="password" placeholder="Enter Password" required>
+            <button type="submit">REGISTER</button>
+        </form>
+        <div class="links">
+            Already have an account? <a href="mob_login.html">Log In</a>
+        </div>
+    </div>
+</body>
+</html>

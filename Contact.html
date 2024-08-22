@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ambica Jewelry</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .contact-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    max-width: 1000px;
+    width: 100%;
+    padding: 20px;
+    background-color: #b6d7f4;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    margin-left: 10%;
+    margin-top: 70px;
+}
+
+.contact-form, .map {
+    flex: 1;
+}
+
+.contact-form h2, .map h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.contact-form label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #666;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    background-color: #57aaf3;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #57aaf3;
+}
+
+.map iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+    }
+}
+
+.form-message {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #57aaf3;
+}
+
+
+        </style>
+</head>
+
+<body>
+
+    <div class="home_black_version">
+        <header class="header_area header_black">
+            <!-- header top starts -->
+            <div class="header_top">
+                <div class="container">
+                    <div class="row align-items-center">
+
+                        <div class="col-lg-6 col-md-6">
+                            <h1 style="font-size: 27px; color: #57aaf3;">Ambica</h1>
+                        </div>
+                        
+                        <div class="col-lg-6 col-md-6">
+                            <div class="top_right text-right">
+                                <ul>
+                                    <!-- <li class="language">
+                                        <a href="#">English <i class="ion-chevron-down"></i></a>
+                                        <ul class="dropdown_language">
+                                            <li><a href="#">French</a></li>
+                                            <li><a href="#">Germany</a></li>
+                                            <li><a href="#">Hindi</a></li>
+                                        </ul>
+                                    </li> --> 
+                                    <!-- <li class="currency">
+                                        <a href="#">INR <i class="ion-chevron-down"></i></a>
+                                        <ul class="dropdown_currency">
+                                            <li><a href="#">USD - Dollar</a></li>
+                                            <li><a href="#">EUR - Euro</a></li>
+                                            <li><a href="#">GBP - British Pound</a></li>
+                                        </ul>
+                                    </li> -->
+                                    <li class="top_links">
+                                        <a href="#">My Account <i class="ion-chevron-down"></i></a>
+                                        <ul class="dropdown_links">
+                                            <li><a href="login popup.html">Login</a></li>
+                                            <li><a href="acc.html">Account dashboard</a></li>
+                                            <li><a href="edit.html">Shopping Cart</a></li>
+                                            <li><a href="wishlist.html">Wishlist</a></li>
+                                            <li><a href="#">Logout</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- header top ends -->
+
+            <!-- header middle starts -->
+            <!--<div class="header_middel">
+                <div class="container">
+                    <div class="row align-items-center">
+
+                        <div class="col-lg-5">
+                            <div class="home_contact">
+                                <div class="contact_icone">
+                                    <img src="images/icon/icon_phone.png" alt="">
+                                </div>
+                                <div class="contact_box">
+                                    <p>Inquiry / Helpline : <a href="tel: 1234567894">1234567894</a></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-2 col-md-3 col-4">
+                            <div class="logo">
+                                <a href="index.html"><img src="#" alt=""></a>
+                                <h2 style="    font-size: 27px; color: #57aaf3;">Ambica </h2>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-5 col-md-7 col-6">
+                            <div class="middel_right">
+                                <div class="search_btn">
+                                    <a href="#"><i class="ion-ios-search-strong"></i></a>
+                                    <div class="dropdown_search">
+                                        <form action="#">
+                                            <input type="text" placeholder="Search Product ....">
+                                            <button type="submit"><i class="ion-ios-search-strong"></i></button>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="wishlist_btn">
+                                    <a href="#"><i class="ion-heart"></i></a>
+                                </div>
+                                <div class="cart_link">
+                                    <a href="#"><i class="ion-android-cart"></i><span class="cart_text_quantity">Rs.
+                                            67,598</span><i class="ion-chevron-down"></i></a>
+                                    <span class="cart_quantity">2</span>
+
+                                    
+                                    <div class="mini_cart">
+                                        <div class="cart_close">
+                                            <div class="cart_text">
+                                                <h3>cart</h3>
+                                            </div>
+                                            <div class="mini_cart_close">
+                                                <a href="javascript:void(0)"><i class="ion-android-close"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="cart_item">
+                                            <div class="cart_img">
+                                                <a href="#"><img src="images/nav-product/product.jpg" alt=""></a>
+                                            </div>
+                                            <div class="cart_info">
+                                                <a href="#">Earings</a>
+                                                <span class="quantity">Qty : 1</span>
+                                                <span class="price_cart">Rs. 54,599</span>
+                                            </div>
+                                            <div class="cart_remove">
+                                                <a href="#"><i class="ion-android-close"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="cart_item">
+                                            <div class="cart_img">
+                                                <a href="#"><img src="images/nav-product/product2.jpg" alt=""></a>
+                                            </div>
+                                            <div class="cart_info">
+                                                <a href="#">Bracelet</a>
+                                                <span class="quantity">Qty : 1</span>
+                                                <span class="price_cart">Rs. 12,999</span>
+                                            </div>
+                                            <div class="cart_remove">
+                                                <a href="#"><i class="ion-android-close"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="cart_total">
+                                            <span>Subtotal : </span>
+                                            <span>Rs. 67,598</span>
+                                        </div>
+                                        <div class="mini_cart_footer">
+                                            <div class="cart_button view_cart">
+                                                <a href="#">View Cart</a>
+                                            </div>
+                                            <div class="cart_button checkout">
+                                                <a href="#" class="active">Checkout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+
+            <!-- header middle ends -->
+
+            <!-- header bottom starts -->
+
+            <div class="header_bottom sticky-header">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-6 col-md-6 col-6">
+                            <div class="main_menu_inner">
+                                <div class="main_menu">
+                                    <nav>
+                                        <ul>
+                                            <li class="active">
+                                                <a href="index.html">Home <i class="ion-chevron-down"></i></a>
+                                                <ul class="sub_menu">
+                                                    <li><a href="#">Banner</a></li>
+                                                    <li><a href="#">Featured</a></li>
+                                                    <li><a href="#">Collection</a></li>
+                                                    <li><a href="#">Best Selling</a></li>
+                                                    <li><a href="#">News</a></li>
+                                                    <li><a href="#">Blog</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="category.html">Category <i class="ion-chevron-down"></i></a>
+                                                <ul class="mega_menu">
+                                                    <li>
+                                                        <a href="women.html">Women</a>
+                                                        <ul>
+                                                            <li><a href="earing.html">Earring</a></li>
+                                                            <li><a href="pendant&necklace.html">Pendant&Necklace</a></li>
+                                                            <li><a href="rings.html">Rings</a></li>
+                                                            <li><a href="anklets.html">Anklets</a></li>
+                                                            <li><a href="braclet.html">Bracelets</a></li>
+                                                            <li class="has-submenu">
+                                                                <a href="#">Other Category</a>
+                                                                <ul class="submenu-inline">
+                                                                    <li><a href="jewelleryset.html">Jewellry Set</a></li>
+                                                                    <li><a href="chains&mangalsutra.html">Chains & Mangalsutra</a></li>
+                                                                    <li><a href="nosepins.html">Nose pins & Rings</a></li>
+                                                                    <li><a href="toerings.html">Toe rings</a></li>
+                                                                    <li><a href="bangals.html">Bangles</a></li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <a href="men.html">Men</a>
+                                                        <ul>
+                                                            <li><a href="men_ring.html">Ring</a></li>
+                                                            <li><a href="men_pendant.html">Pendant&Chains</a></li>
+                                                            <li><a href="men_braclet.html">Bracelet</a></li>
+                                                            <li><a href="men_earing.html">Earing</a></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="latestcollection.html">Latest Collections <i class="ion-chevron-down"></i></a>
+                                                <ul class="sub_menu pages">
+                                                    <li><a href="wingsofwonder.html">Wings On Wonder</a></li>
+                                                    <li><a href="cherryontop.html">Cherry on Pop</a></li>
+                                                    <li><a href="loveinparis.html">Love in paris</a></li>
+                                                    <li><a href="justarrived.html">Just Arrived</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="offer.html">Offer</a></li>
+                                            <li><a href="about.html">About Us</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-6">
+                            <div class="middel_right">
+                                <div class="search_btn">
+                                    <a href="#"><i class="ion-ios-search-strong"></i></a>
+                                    <div class="dropdown_search">
+                                        <form action="#">
+                                            <input type="text" placeholder="Search Product ....">
+                                            <button type="submit"><i class="ion-ios-search-strong"></i></button>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="wishlist_btn">
+                                    <a href="#"><i class="ion-heart"></i></a>
+                                </div>
+                                <div class="cart_link">
+                                    <a href="#"><i class="ion-android-cart"></i><span class="cart_text_quantity">Rs.
+                                            67,598</span><i class="ion-chevron-down"></i></a>
+                                    <span class="cart_quantity">2</span>
+
+                                    <!-- mini cart -->
+                                    <div class="mini_cart">
+                                        <div class="cart_close">
+                                            <div class="cart_text">
+                                                <h3>cart</h3>
+                                            </div>
+                                            <div class="mini_cart_close">
+                                                <a href="javascript:void(0)"><i class="ion-android-close"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="cart_item">
+                                            <div class="cart_img">
+                                                <a href="#"><img src="images/nav-product/product.jpg" alt=""></a>
+                                            </div>
+                                            <div class="cart_info">
+                                                <a href="#">Earings</a>
+                                                <span class="quantity">Qty : 1</span>
+                                                <span class="price_cart">Rs. 54,599</span>
+                                            </div>
+                                            <div class="cart_remove">
+                                                <a href="#"><i class="ion-android-close"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="cart_item">
+                                            <div class="cart_img">
+                                                <a href="#"><img src="images/nav-product/product2.jpg" alt=""></a>
+                                            </div>
+                                            <div class="cart_info">
+                                                <a href="#">Bracelet</a>
+                                                <span class="quantity">Qty : 1</span>
+                                                <span class="price_cart">Rs. 12,999</span>
+                                            </div>
+                                            <div class="cart_remove">
+                                                <a href="#"><i class="ion-android-close"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="cart_total">
+                                            <span>Subtotal : </span>
+                                            <span>Rs. 67,598</span>
+                                        </div>
+                                        <div class="mini_cart_footer">
+                                            <div class="cart_button view_cart">
+                                                <a href="#">View Cart</a>
+                                            </div>
+                                            <div class="cart_button checkout">
+                                                <a href="#" class="active">Checkout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- mini cart ends  -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- header bottom ends -->
+        </header>
+
+
+
+        <!-- ContactUs Form -->
+        <div class="contact-container">
+            <div class="contact-form">
+                <h2>Contact Us</h2>
+                <form id="contactForm">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+    
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" name="subject" required>
+    
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+    
+                    <button type="submit">Submit</button>
+                    <div id="formMessage" class="form-message"></div>
+                </form>
+            </div>
+            <div class="map">
+                <h2>Our Location</h2>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345093874!2d144.95373531531688!3d-37.816279979751955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577c2f6211b19e3!2sFlinders%20Street%20Station!5e0!3m2!1sen!2sau!4v1632679164671!5m2!1sen!2sau" allowfullscreen="" loading="lazy"></iframe>
+                <div class="subscibe_form">
+                    
+                    <form class="footer-newsletter" style="    margin-top: 8%; margin-left: 10%; ">
+                        <h3>Subscribe for Ambica Magazines</h3>
+                        <input type="email" placeholder="Email address ..." autocapitalize="off"
+                            autocomplete="off" style="width: 300px; border-radius: 5px;">
+                        <button style="    padding: 4px 20px;
+                        background-color: #57aaf3;
+                        color: black;
+                        border: none;
+                        border-radius: 5px;">Subscribe</button>
+                    </form>
+                </div>
+            
+            </div>
+        </div>
+       
+        
+
+
+        
+       
+        <!-- footer section starts -->
+        <footer class="footer_widgets footer_black">
+            <div class="container">
+                <div class="footer_top">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 col-sm-8">
+                            <div class="widgets_container contact_us">
+                                <h3>About Ambica</h3>
+                                <div class="footer_contact">
+                                    <p>Address : Ambica palace, Surat, Gujarat</p>
+                                    <p>Phone : <a href="tel:(+91)8329566392">(+91)8329566392</a></p>
+                                    <p>Email : Ambicajewlers@gmail.com</p>
+                                    <ul>
+                                        <li><a href="#"><i class="ion-social-facebook"></i></a></li>
+                                        <li><a href="#"><i class="ion-social-twitter"></i></a></li>
+                                        <li><a href="#"><i class="ion-social-rss"></i></a></li>
+                                        <li><a href="#"><i class="ion-social-googleplus"></i></a></li>
+                                        <li><a href="#"><i class="ion-social-youtube"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-6 col-sm-4 col-6">
+                            <div class="widgets_container widget_menu">
+                                <h3>Information</h3>
+                                <div class="footer_menu">
+                                    <ul>
+                                        <li><a href="#">About Us</a></li>
+                                        <li><a href="#">Blog</a></li>
+                                        <li><a href="Contact.html">Contact</a></li>
+                                        <li><a href="#">Services</a></li>
+                                        <li><a href="#">Collection</a></li>
+                                        <li><a href="#">Portfolio</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-6 col-sm-5 col-6">
+                            <div class="widgets_container widget_menu">
+                                <h3>My Account</h3>
+                                <div class="footer_menu">
+                                    <ul>
+                                        <li><a href="#">My Account</a></li>
+                                        <li><a href="#">Contact</a></li>
+                                        <li><a href="#">Wishlist</a></li>
+                                        <li><a href="#">Portfolio</a></li>
+                                        <li><a href="Contact.html">Checkout</a></li>
+                                        <li><a href="#">Frequently Questions</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-7">
+                            <div class="widgets_container product_widget">
+                                <h3>Top Rated Products</h3>
+                                <div class="simple_product">
+                                    <div class="simple_product_items">
+                                        <div class="simple_product_thumb">
+                                            <a href="#"><img src="images/product/14.jpg" alt=""></a>
+                                        </div>
+                                        <div class="simple_product_content">
+                                            <div class="tag_cate">
+                                                <a href="#">Women,</a>
+                                                <a href="#">Earrings</a>
+                                            </div>
+                                            <div class="product_name">
+                                                <h3><a href="#">Bracelet</a></h3>
+                                            </div>
+                                            <div class="product_price">
+                                                <span class="old_price">Rs. 45612.54</span>
+                                                <span class="current_price">Rs. 41612.54</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="simple_product_items">
+                                        <div class="simple_product_thumb">
+                                            <a href="#"><img src="images/product/28.jpg" alt=""></a>
+                                        </div>
+                                        <div class="simple_product_content">
+                                            <div class="tag_cate">
+                                                <a href="#">Women,</a>
+                                                <a href="#">Earrings</a>
+                                            </div>
+                                            <div class="product_name">
+                                                <h3><a href="#">Ring</a></h3>
+                                            </div>
+                                            <div class="product_price">
+                                                <span class="old_price">Rs. 75612.54</span>
+                                                <span class="current_price">Rs. 71612.54</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer_bottom">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="copyright_area">
+                                <p>Copyright &copy; 2020 <a href="#">Ambica</a> All rights Reserved.</p>
+                                <img src="images/icon/papyel2.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+        <!-- footer section ends -->
+    </div>
+
+    <!-- modal section starts -->
+    <div class="modal fade" id="modal_box" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <div class="modal_body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-5 col-md-5 col-sm-12">
+                                <div class="modal_tab">
+                                    <div class="tab-content product-details-large">
+                                        <div class="tab-pane fade show active" id="tab1" role="tabpanel">
+                                            <div class="modal_tab_img">
+                                                <a href="#"><img src="images/product/70.jpg" alt=""></a>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="tab2" role="tabpanel">
+                                            <div class="modal_tab_img">
+                                                <a href="#"><img src="images/product/71.jpg" alt=""></a>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="tab3" role="tabpanel">
+                                            <div class="modal_tab_img">
+                                                <a href="#"><img src="images/product/72.jpg" alt=""></a>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="tab4" role="tabpanel">
+                                            <div class="modal_tab_img">
+                                                <a href="#"><img src="images/product/73.jpg" alt=""></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal_tab_button">
+                                        <ul class="nav product_navactive owl-carousel" role="tablist">
+                                            <li>
+                                                <a href="#tab1" class="nav-link active" data-toggle="tab" role="tab"
+                                                    aria-controls="tab1" aria-selected="false"><img
+                                                        src="images/product/70.jpg" alt=""></a>
+                                            </li>
+                                            <li>
+                                                <a href="#tab2" class="nav-link" data-toggle="tab" role="tab"
+                                                    aria-controls="tab2" aria-selected="false"><img
+                                                        src="images/product/71.jpg" alt=""></a>
+                                            </li>
+                                            <li>
+                                                <a href="#tab3" class="nav-link button_three" data-toggle="tab"
+                                                    role="tab" aria-controls="tab3" aria-selected="false"><img
+                                                        src="images/product/72.jpg" alt=""></a>
+                                            </li>
+                                            <li>
+                                                <a href="#tab4" class="nav-link" data-toggle="tab" role="tab"
+                                                    aria-controls="tab4" aria-selected="false"><img
+                                                        src="images/product/73.jpg" alt=""></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-7 col-md-7 col-sm-12">
+                                <div class="modal_right">
+                                    <div class="modal_title mb-10">
+                                        <h2>Women's Necklace</h2>
+                                    </div>
+                                    <div class="modal_price mb-10">
+                                        <span class="new_price">Rs. 51164</span>
+                                        <span class="old_price">Rs. 54164</span>
+                                    </div>
+                                    <div class="see_all">
+                                        <a href="#">See All Features</a>
+                                    </div>
+                                    <div class="modal_add_to_cart mb-15">
+                                        <form action="#">
+                                            <input type="number" min="0" max="100" step="1">
+                                            <button type="submit">Add To Cart</button>
+                                        </form>
+                                    </div>
+                                    <div class="modal_description mb-15">
+                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus quibusdam
+                                            nisi voluptas consequatur tempora, recusandae nemo blanditiis eaque odit
+                                            voluptatibus voluptatem, ipsa incidunt fugiat a.</p>
+                                    </div>
+                                    <div class="modal_social">
+                                        <h2>Share this Product</h2>
+                                        <ul>
+                                            <li><a href="#"><i class="ion-social-facebook"></i></a></li>
+                                            <li><a href="#"><i class="ion-social-twitter"></i></a></li>
+                                            <li><a href="#"><i class="ion-social-rss"></i></a></li>
+                                            <li><a href="#"><i class="ion-social-googleplus"></i></a></li>
+                                            <li><a href="#"><i class="ion-social-youtube"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- modal section ends -->
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <!-- JavaScript Bundle with Popper.js -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+    <script src="main.js"></script>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        document.getElementById('formMessage').textContent = 'Thank you for contacting us!';
+    });
+    </script>
+</body>
+
+</html>
